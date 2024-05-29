@@ -1,0 +1,34 @@
+<%= turbo_frame_tag "flash" do %>
+  <% if flash[:notice] %>
+    <div id="flash-notice" class="fixed top-24 left-1/2 transform -translate-x-1/2 mt-4 px-4 py-2 rounded shadow-md bg-stone-50 border-l-8 border-green-400 text-green-800">
+      <%= flash[:notice] %>
+    </div>
+  <% elsif flash[:alert] %>
+    <div id="flash-alert" class="fixed top-24 left-1/2 transform -translate-x-1/2 mt-4 px-4 py-2 rounded shadow-md bg-stone-50 border-l-8 border-green-400 text-red-800">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+<% end %>
+<div class="max-w-[600px] <%= defined?(classname) && classname %>" >
+  <h2 class="text-red text-center mb-6 text-3xl">Register meetup or conference</h2>
+  <%= form_with url: meetup_registration_requests_path, model: MeetupRegistrationRequest.new, class: "bg-white shadow-lg p-6 md:p-8" do |f| %>
+    <fieldset class="w-full md:flex flex-wrap gap-4 justify-between mb-6">
+      <div class="flex-1 mb-6 mt-2 md:w-1/2">
+        <%= f.label :name, "Name*" %>
+        <%= f.text_field :name, placeholder: "e.g. Johnny", autocomplete: "on", class: "w-full border-none rounded", required: true %>
+      </div>
+
+      <div class="flex-1 mb-6 mt-2 md:w-1/2">
+        <%= f.label :email, "Email Address*" %>
+        <%= f.email_field :email, placeholder: "e.g. johnny@example.com", class: "w-full border-none rounded", required: true %>
+      </div>
+    </fieldset>
+
+    <div class="mb-6 mt-2">
+      <%= f.label :message, "Message*" %>
+      <%= f.text_area :message, placeholder: "Your Message", class: "w-full border-none rounded", rows: 5, required: true %>
+    </div>
+
+    <%= f.submit "Submit", class: "w-full md:w-fit bg-red text-white !mx-auto py-2 px-8 rounded tracking-wider uppercase font-bold hover:bg-black cursor-pointer" %>
+  <% end %>
+</div>

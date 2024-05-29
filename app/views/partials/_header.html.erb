@@ -1,0 +1,27 @@
+<header class="bg-white p-6 text-black w-full shadow-b shadow-lg z-10 flex justify-between items-center relative">
+  <div>
+    <%= link_to root_path, html_options = { class: "flex" } do %>
+      <%= image_tag "ruby-europe-logo.svg", alt: "Ruby Europe Logo", style: 'width: 300px; max-width: 80vw'  %>
+    <% end %>
+  </div>
+  <nav data-controller="nav" class="flex">
+    <button class="md:hidden" data-action="nav#open" data-nav-target="openBtn">
+      <div class="bg-black h-[2px] w-6 mb-1"></div>
+      <div class="bg-black h-[2px] w-6 mb-1"></div>
+      <div class="bg-black h-[2px] w-6"></div>
+    </button>
+    <button
+      class="hidden relative w-6
+      before:content-[' '] before:absolute before:left-3 before:h-6 before:w-[2px] before:bg-black before:rotate-45 before:-translate-y-1/2
+      after:content-[' '] after:absolute after:left-3 after:h-6 after:w-[2px] after:bg-black after:-rotate-45 after:-translate-y-1/2"
+      data-action="nav#close"
+      data-nav-target="closeBtn">
+    </button>
+    <ul class="text-center text-base bg-white list-style-none hidden md:inline-block" data-nav-target="menu">
+      <li class="md:inline-block text-base md:border-l border-gray px-1 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red"><%= link_to "Meetups", "/", class: 'bold' %></li>
+      <li class="md:inline-block text-base md:border-l border-gray px-1 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red"><%= link_to "Conferences", conferences_path, class: 'bold' %></li>
+      <li class="md:inline-block text-base md:border-l border-gray px-1 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red"><%= link_to "About us", "/about", class: 'bold' %></li>
+      <li class="md:inline-block text-base md:border-l border-gray px- lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red"><%= link_to "Contact", "/contact/new", class: 'bold' %></li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,54 @@
+<section class="mx-6 md:mx-24 lg:mx-80" data-greeter-target="greeting">
+  <h1 class="text-center text-3xl mt-6 md:mt-12 text-red">About Ruby Europe</h1>
+  <p class="text-justify text-base mt-6">
+    We invite all Ruby and Rails enthusiasts, organizers, and companies in Europe to join us in building a thriving Ruby community across the continent. Together, we can make Ruby and Rails a leading force in the European tech landscape. Our goal is to unite the entire Ruby and Ruby on Rails community. Whether you're a seasoned developer or just starting out, you'll find a warm and supportive network here. Discover local meetups and conferences, share experiences, and learn from each other.
+  </p>
+
+
+  <h2 class="text-center text-3xl mt-6 md:mt-12 text-red">Mission</h2>
+  <p class="text-justify text-base mt-6">
+    The mission of Ruby Europe is to promote and support the Ruby and Ruby on Rails community across Europe. Our key objectives are to:
+  </p>
+  <ul class="text-justify text-base list-disc mt-3">
+    <li class="mt-1">Actively build and unite the local Ruby community in major European cities</li>
+    <li class="mt-1">Organize and promote events, conferences, and workshops related to Ruby and Rails</li>
+    <li class="mt-1">Facilitate the exchange of knowledge, experience, and speakers between different European cities</li>
+    <li class="mt-1">Encourage developers to use Ruby and Rails, and showcase their advantages over other languages</li>
+    <li class="mt-1">Enable new developers to join the Ruby and Rails ecosystem in Europe</li>
+    <li class="mt-1">Collaborate with companies to jointly develop Ruby and Rails in the European market</li>
+  </ul>
+  <p class="text-center text-base">
+    <button class="w-full md:w-fit bg-red text-white !mx-auto py-2 px-8 mt-6 rounded tracking-wider uppercase font-bold hover:bg-black cursor-pointer" >
+      <%= link_to "Read More", "/RubyEurope.pdf" %>
+    </button>
+  </p>
+
+  <h2 class="text-center text-3xl mt-12 text-red">Vision</h2>
+  <p class="text-justify text-base mt-6">
+    Our vision is to create a strong, integrated Ruby community in Europe. We want Ruby and Rails to become one of the leading programming languages and platforms on our continent. Together, we will inspire developers, organizers, speakers, and companies to cooperate and mutually develop the Ruby ecosystem.
+  </p>
+
+  <h2 class="text-center text-3xl mt-12 text-red">
+    Interested in organizing your own event?
+  </h2>
+  <p class="text-center text-base mt-6">
+    Reach out to our community for tips and assistance. Let's build and grow together!<br />
+    <button class="w-full md:w-fit bg-red text-white !mx-auto py-2 px-8 mt-6 rounded tracking-wider uppercase font-bold hover:bg-black cursor-pointer" >
+      <%= link_to "Contact us", "/contact/new" %>
+    </button>
+  </p>
+
+  <div class="bg-[url('./background-770w.webp')] max-h-[592px] md:max-h-auto md: md:bg-[url('./background-1500w.webp')] xl:bg-[url('./background.webp')] bg-cover bg-right px-8 py-24 portrait:py-48 lg:p-48 mt-16 -mx-8 md:-mx-24 lg:-mx-80 -mb-12 md:-mb-24 bg-opacity-85 bg-black portrait:bg-blend-hard-light md:bg-blend-normal">
+    <h2 class="text-center text-3xl text-white font-bold uppercase">
+      Become a Sponsor
+    </h2>
+    <p class="text-center text-base mt-8">
+      Support our mission on creating Ruby and Rails a leading force in the European tech landscape and become Sponsor.<br />
+
+      <button class="w-full md:w-fit bg-red text-white !mx-auto py-2 px-8 mt-6 rounded tracking-wider uppercase font-bold hover:bg-black cursor-pointer" >
+        <%= mail_to "contact@rubyeurope.com", "Fuel our mission" %>
+      </button>
+    </p>
+  </div>
+
+</section>

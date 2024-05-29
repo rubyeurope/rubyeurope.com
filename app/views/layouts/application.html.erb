@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ruby Europe - <%= @page_title %></title>
+    <meta name="description" content="European Ruby and Ruby on Rails community. Discover local meetups and conferences, join Discord, share experiences, and learn from each other">
+    <meta name="keywords" content="Ruby, Europe, Discord, Community, Meetup, Conference, Ruby on Rails">
+    <link rel="canonical" href="<%= current_url_without_parameters %>">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag %>
+
+    <meta property="og:site_name" content="Ruby Europe">
+    <meta property="og:type" content=”website”>
+    <meta property="og:image" content="https://rubyeurope.com/images/ruby-europe-og.jpg">
+    <meta property="og:description" content="European Ruby and Ruby on Rails community. Discover local meetups and conferences, join Discord, share experiences, and learn from each other">
+    <meta property="og:title" content="Ruby Europe - <%= @page_title %>">
+    <meta property="og:url" content="<%= current_url_without_parameters %>">
+
+    <meta name="twitter:site" content="Ruby Europe">
+    <meta name="twitter:title" content="Ruby Europe - <%= @page_title %>">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="European Ruby and Ruby on Rails community. Discover local meetups and conferences, join Discord, share experiences, and learn from each other">
+    <meta name="twitter:image" content="https://rubyeurope.com/images/ruby-europe-og.jpg">
+
+    <script>
+      (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+        key: "AIzaSyDnHb4eAVRmBAaDnM8RgxXhnG52Xe9vQlo"
+      });
+    </script>
+
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <%= hotwire_livereload_tags if Rails.env.development? %>
+  </head>
+
+  <body class="text-black flex flex-col justify-stretch min-h-screen w-calc[100%-16px]">
+
+    <%= render partial: '/partials/header' %>
+
+    <main class="grow" data-controller="greeter">
+      <%= yield %>
+
+      <% if controller_name == "meetups" || controller_name == "conferences"%>
+        <div class="text-center lg:mt-4" >
+          <button
+            type="button"
+            title="click to scroll"
+            class="border-r-red border-b-red border-b-4 border-r-4 inline-block p-3 animate-bounce"
+            data-action="greeter#scroll">
+          </button>
+        </div>
+
+        <%= render partial: 'about/about' %>
+
+      <% end %>
+
+    </main>
+
+    <%= render partial: '/partials/footer' %>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<svg width="158" height="117" viewbox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <polygon id="svg_1" stroke-width="4" stroke="white" fill="#CC342D" points="2.1666667461395264,39 39.166666746139526,2 119.16666674613953,2 156.16666674613953,39 79.16666674613953,115 "/>
+  <line id="svg_2" y2="38.83333" x2="156.03977" y1="38.83333" x1="2" stroke-width="4" stroke="white" fill="none"/>
+  <line id="svg_4" y2="2.66667" x2="118.83333" y1="39" x1="78.5" stroke-width="4" stroke="white" fill="none"/>
+  <line stroke="white" id="svg_5" y2="38.5" x2="78.66667" y1="2.5" x1="39" stroke-width="4" fill="none"/>
+ </g>
+</svg>

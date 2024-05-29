@@ -1,0 +1,2 @@
+class MeetupRegistrationRequest < ApplicationRecord
+end

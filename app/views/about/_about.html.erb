@@ -1,0 +1,34 @@
+<section class="mt-12 md:mt-24 lg:mt-32 mx-6 md:mx-24 lg:mx-72 scroll-mt-14" data-greeter-target="greeting">
+  <h1 class="text-center text-3xl text-red" >
+    Welcome to Ruby Europe
+  </h1>
+  <p class="text-justify text-base mt-6">
+    We invite all Ruby and Rails enthusiasts, organizers, and companies in Europe to join us in building a thriving Ruby community across the continent. Together, we can make Ruby and Rails a leading force in the European tech landscape.
+
+    Our goal is to unite the entire Ruby and Ruby on Rails community. Whether you're a seasoned developer or just starting out, you'll find a warm and supportive network here. Discover local meetups and conferences, share experiences, and learn from each other.
+  </p>
+
+  <div class="mt-16 w-full">
+    <h2 class="text-red text-center text-3xl">Sign up to Ruby Europe newsletter</h2>
+    <%= render partial: '/partials/mailchimp_sign_up_form' %>
+  </div>
+
+  <div class="mt-16 w-full mx-auto text-center">
+    <h2 class="text-3xl text-red text-center">Join the Discord community</h2>
+    <a href="https://discord.gg/VQpDWPpBZe">
+      <%= image_tag "/discord-qr-code.png", alt: "red ruby", width: "300px", height: "auto", class: "mt-6 mx-auto rounded-md shadow-xl" %>
+    </a>
+  </div>
+
+  <h2 class="mt-16 text-center text-3xl text-red" >
+    Interested in organizing your own event?
+  </h2>
+  <p class="text-center text-base mt-6">
+    Reach out to our community for tips and assistance. Let's build and grow together!<br />
+
+    <button class="w-full md:w-fit bg-red text-white !mx-auto py-2 px-8 mt-6 rounded tracking-wider uppercase font-bold hover:bg-black cursor-pointer" >
+      <%= link_to "Contact us", "/contact/new" %>
+    </button>
+  </p>
+
+</section>

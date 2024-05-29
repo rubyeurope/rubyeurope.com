@@ -1,0 +1,25 @@
+<%= content_tag :div, id: "map", data: { controller: "events", "events-events-value": @meetups.map(&:serialize).to_json }, class: "relative md:flex" do %>
+  <div class="h-[80dvh] md:w-3/4 grow bg-accent shadow-lg relative md:order-2" data-events-target="displayMap" id="displayMap"></div>
+
+  <div class="absolute bottom-0 md:relative rounded bg-white shadow-xl w-3/4 md:w-1/4 m-[7px] mb-5 md:m-0 md:order-1">
+    <ul data-events-target="eventsList" class="hidden md:block h-32 md:h-[80vh] w-full overflow-y-scroll px-4 md:shadow-lg">
+      <% @meetups.each_with_index do |meetup| -%>
+        <li>
+          <button type="button" id="<%= dom_id(meetup) %>" data-action="click->events#displayDetails" class="w-full h-14 md:h-20 text-sm group py-2 md:py-4 px-2 pr-6 border-b border-gray-light flex items-center hover:opacity-80">
+            <div class="w-1/4 mr-6">
+              <img src=<%= meetup.img %> class="max-h-8 md:max-h-12 mx-auto" />
+            </div>
+            <p class="text-left w-3/4 group-hover:text-red"><%= meetup.name %></p>
+          </button>
+        </li>
+      <% end %>
+    </ul>
+    <button class="w-full md:hidden py-2 border border-gray rounded text-sm group hover:text-red" data-action="click->events#toggleList">
+      <span data-events-target="selectButtonText">Select meetup</span>
+      <div
+        class="border-r-black border-b-black border-b-2 border-r-2 inline-block -rotate-[135deg] w-2 h-2 ml-2 group-hover:border-r-red group-hover:border-b-red"
+      >
+      </div>
+    </button>
+  </div>
+<% end %>

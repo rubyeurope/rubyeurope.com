@@ -1,0 +1,20 @@
+<section class="mb-96 md:mb-32 mt-24 px-6 md:px-24 flex flex-wrap justify-around">
+  <h1 class="text-center text-3xl text-red">Get in touch with Ruby Europe</h1>
+
+  <div class="w-full text-center mt-16">
+    <h2 class="text-3xl text-red text-center">Email us</h2>
+    <a href="mailto:contact@rubyeurope.com" class="underline hover:text-red mt-6">contact@rubyeurope.com</a>
+  </div>
+
+  <div class="mt-12 w-full lg:w-1/2 mx-auto text-center">
+    <%= render partial: 'form', locals: { classname: 'mx-auto' } %>
+  </div>
+
+  <div class="mt-12 w-full lg:w-1/2 mx-auto text-center">
+    <h2 class="text-3xl text-red text-center mb-6">Join the Discord community</h2>
+    <%= link_to "Open in browser", "https://discord.gg/VQpDWPpBZe", class: "inline-block underline hover:text-red mb-2", target: "_blank", rel:"norefferer noopener" %>
+    <p>or <br/><span class="inline-block mt-2">Scan for mobile</span></p>
+
+    <%= image_tag "/discord-qr-code.png", alt: "red ruby", width: "300px", height: "auto", class: "mx-auto rounded-md shadow-xl" %>
+  </div>
+</section>
