@@ -277,6 +277,15 @@ locations = {
       link: 'https://rubyturkiye.org/',
       img: 'https://media.kommunity.com/communities/ruby-turkiye/2896/oval.png?p=avatar-120'
     },
+    {
+      slug: 'poznan-ruby-user-group',
+      name: 'Poznań Ruby User Group',
+      description: 'Poznań community-driven Ruby User Group (aka PRUG). We meet once a month (every last Thursday!) to talk about Ruby, Rails, and other related topics.',
+      latitude: 52.40478096345464,
+      longitude: 16.929847551119483,
+      link: 'https://www.facebook.com/rubypoznan',
+      img: '/logos/pl-poznan-prug.png'
+    },
   ],
   conferences: [
     {
