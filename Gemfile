@@ -59,6 +59,8 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem "sqlite3", "~> 1.6", ">= 1.6.6"
 end
 
 group :test do

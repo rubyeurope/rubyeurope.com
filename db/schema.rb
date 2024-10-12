@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema[7.1].define(version: 2024_10_07_124333) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension "plpgsql" if Rails.env.production?
 
   create_table "conferences", force: :cascade do |t|
     t.string "name"
