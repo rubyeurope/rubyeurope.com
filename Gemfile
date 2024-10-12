@@ -47,6 +47,8 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug"
+
+  gem "sqlite3", "~> 1.6", ">= 1.6.6"
 end
 
 group :development do
@@ -59,8 +61,6 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-
-  gem "sqlite3", "~> 1.6", ">= 1.6.6"
 end
 
 group :test do
