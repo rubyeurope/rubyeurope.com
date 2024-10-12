@@ -286,6 +286,15 @@ locations = {
       link: 'https://www.facebook.com/rubypoznan',
       img: '/logos/pl-poznan-prug.png'
     },
+    {
+      slug: 'toulouse-rb',
+      name: 'Toulouse.rb',
+      description: 'Toulouse.rb is a group that brings together Ruby enthusiasts from the Toulouse region. Meetings are regularly organized around the Ruby programming language to exchange best practices, advice, stories, and learn from each other!',
+      latitude: 43.60439023727443,
+      longitude: 1.4433797723148245,
+      link: 'https://www.meetup.com/toulouse-ruby-friends/',
+      img: '/logos/toulouse-rb.png'
+    },
   ],
   conferences: [
     {
