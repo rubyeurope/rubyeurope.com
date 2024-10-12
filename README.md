@@ -71,4 +71,4 @@ Follow these steps to set up the project locally:
    bin/dev # use to enable tailwind and hot reload
    ```
 
-5. Visit `http://localhost:3000` in your web browser to see the application running (Google maps won't work otherwise).
+5. Visit `http://localhost:3000` or `http://0.0.0.0:3000` in your web browser to see the application running (Google maps won't work otherwise).
