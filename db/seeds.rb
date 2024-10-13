@@ -295,6 +295,15 @@ locations = {
       link: 'https://www.meetup.com/toulouse-ruby-friends/',
       img: '/logos/toulouse-rb.png'
     },
+    {
+      slug: 'paris-rb',
+      name: 'Paris.rb',
+      description: 'Meet us every first Tuesday of the month to talk about Ruby, Rails, gems, frameworks, as well as best practices (agile methods, testing, management...) and the business side (jobs, products...) of web and application development.',
+      latitude: 48.85341,
+      longitude: 2.3488,
+      link: 'https://paris-rb.org/',
+      img: '/logos/parisrb-logo.png'
+    },
   ],
   conferences: [
     {
