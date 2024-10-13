@@ -52,15 +52,6 @@ Follow these steps to set up the project locally:
    ```
 
 3. Set up the database:
-   - Copy the example environment file:
-     ```
-     cp .env.development.example .env.development
-     ```
-   - Edit `.env.development` and set your database credentials:
-     ```
-     DB_USERNAME=your_username
-     DB_PASSWORD=your_password
-     ```
    - Create database, run migrations and seed data:
      ```
      rails db:setup
