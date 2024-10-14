@@ -47,6 +47,8 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug"
+
+  gem "sqlite3", "~> 1.6", ">= 1.6.6"
 end
 
 group :development do
@@ -66,5 +68,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "dotenv", "~> 3.1"

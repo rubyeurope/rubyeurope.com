@@ -52,15 +52,6 @@ Follow these steps to set up the project locally:
    ```
 
 3. Set up the database:
-   - Copy the example environment file:
-     ```
-     cp .env.development.example .env.development
-     ```
-   - Edit `.env.development` and set your database credentials:
-     ```
-     DB_USERNAME=your_username
-     DB_PASSWORD=your_password
-     ```
    - Create database, run migrations and seed data:
      ```
      rails db:setup
@@ -71,4 +62,4 @@ Follow these steps to set up the project locally:
    bin/dev # use to enable tailwind and hot reload
    ```
 
-5. Visit `http://localhost:3000` in your web browser to see the application running.
+5. Visit `http://localhost:3000` or `http://0.0.0.0:3000` in your web browser to see the application running (Google maps won't work otherwise).
