@@ -1,6 +1,33 @@
 locations = {
   meetups: [
     {
+      slug: 'ruby-tuesday-tallinn',
+      name: 'Ruby Tuesday Tallinn',
+      description: 'Ruby User Group meeting every last Tuesday of the month from 18:00 onward.',
+      latitude: 59.398279,
+      longitude: 24.659693,
+      link: 'https://www.facebook.com/events/785659903522120',
+      img: '/logos/ruby-tuesday-tallinn.jpg'
+    },
+    {
+      slug: 'ruby-belgium',
+      name: 'Ruby Belgium',
+      description: 'Ruby Belgium is a community of programming enthusiasts using ruby as a tool to connect, build and share knowledge',
+      latitude: 50.84792799176271,
+      longitude: 4.3534307855468235,
+      link: 'https://rubybelgium.be/',
+      img: '/logos/ruby-belgium.svg'
+    },
+    {
+      slug: 'ruby-banitsa',
+      name: 'Ruby Banitsa',
+      description: 'We get together in Sofia, Bulgaria, nom some fresh pastry and talk about tech. All this in a casual setting.',
+      latitude: 42.66169767743095,
+      longitude: 23.317954446819098,
+      link: 'https://rubybanitsa.com',
+      img: '/logos/ruby-banitsa.svg'
+    },
+    {
       slug: 'plrug-warsaw',
       name: 'PLRUG Warsaw',
       description: 'Polish Ruby User Group. Join the community created by Ruby-lovers for creators, enthusiasts, nerds and passionates.',
