@@ -331,6 +331,15 @@ locations = {
       link: 'https://paris-rb.org/',
       img: '/logos/parisrb-logo.png'
     },
+    {
+      slug: 'sthlmrb',
+      name: 'Stockholm Ruby',
+      description: "Everyone's welcome. You don't have to be an expert, a Ruby professional or even a programmer at all. If you're curious and in the neighborhood, drop by!",
+      latitude: 59.326384,
+      longitude: 18.070482,
+      link: 'https://stockholmruby.com',
+      img: '/logos/sthlmrb-logo.png'
+    }
   ],
   conferences: [
     {
