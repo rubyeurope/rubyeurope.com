@@ -4,7 +4,7 @@ export const InfoWindowElementContent = ({ img, link, description, event_date, l
   return `
     <div id="content">
       <div class="flex">
-        <img src=${img} class="mr-5 w-20 h-fit" />
+        <img src=${img} class="mr-5 w-20 h-20" />
         <div class="w-2/3">
          ${event_date ? `<p>${event_date}</p>` : ""}
          ${location ? `<p class="mb-2">${location}</p>` : ""}
