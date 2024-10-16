@@ -339,6 +339,15 @@ locations = {
       longitude: 18.070482,
       link: 'https://stockholmruby.com',
       img: '/logos/sthlmrb-logo.png'
+    },
+    {
+      slug: 'es-valenciarb',
+      name: 'Valencia.rb',
+      description: 'The Valencia.rb user-group is a group for developers, techies & ruby lovers.',
+      latitude: 39.469906,
+      longitude: -0.376288,
+      link: 'https://valenciarb.org',
+      img: '/logos/es-valenciarb.png'
     }
   ],
   conferences: [
@@ -429,4 +438,3 @@ end
 locations[:conferences].each do |conference|
   Conference.find_or_create_by(slug: conference[:slug]).update(conference)
 end
-
