@@ -287,6 +287,15 @@ locations = {
       img: 'https://hamburg.onruby.de/assets/labels/hamburg-b38fc9aa8aea505fcfe49a9032684ec70dbaab11071a4e9aeea2bf55695cdd3f.png'
     },
     {
+      slug: 'dresden-rb',
+      name: 'Dresden.rb',
+      description: 'Ruby User Group Dresden',
+      latitude: 51.035070,
+      longitude: 13.800970,
+      link: 'https://dresdenrb.onruby.de/',
+      img: 'https://dresdenrb.onruby.de/assets/labels/dresdenrb-ac1f028131f60e33b8fec47c5885b79bce77be9b1339bf467426052bb1bbf5c2.png'
+    },
+    {
       slug: 'malmo-rb',
       name: 'Malmö.rb',
       description: 'A group of Ruby enthusiasts from sunny Malmö, Sweden who meet regularly to talk about Ruby, programming, and related topics.',
