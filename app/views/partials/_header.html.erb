@@ -1,7 +1,7 @@
-<header class="bg-white p-6 text-black w-full shadow-b shadow-lg z-10 flex justify-between items-center relative">
+<header class="bg-white p-6 text-black w-full shadow-b shadow-lg z-10 flex justify-between items-center relative h-20 md:h-28">
   <div>
     <%= link_to root_path, html_options = { class: "flex" } do %>
-      <%= image_tag "ruby-europe-logo.svg", alt: "Ruby Europe Logo", style: 'width: 300px; max-width: 80vw'  %>
+      <%= image_tag "ruby-europe-logo.svg", alt: "Ruby Europe Logo", class: "max-w-48 md:max-w-52 xl:max-w-[300px]"  %>
     <% end %>
   </div>
   <nav data-controller="nav" class="flex">
@@ -17,11 +17,25 @@
       data-action="nav#close"
       data-nav-target="closeBtn">
     </button>
-    <ul class="text-center text-base bg-white list-style-none hidden md:inline-block" data-nav-target="menu">
-      <li class="md:inline-block text-base md:border-l border-gray px-1 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red"><%= link_to "Meetups", "/", class: 'bold' %></li>
-      <li class="md:inline-block text-base md:border-l border-gray px-1 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red"><%= link_to "Conferences", conferences_path, class: 'bold' %></li>
-      <li class="md:inline-block text-base md:border-l border-gray px-1 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red"><%= link_to "About us", "/about", class: 'bold' %></li>
-      <li class="md:inline-block text-base md:border-l border-gray px- lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red"><%= link_to "Contact", "/contact/new", class: 'bold' %></li>
+    <ul class="text-center text-sm lg:text-base bg-white list-style-none hidden md:flex" data-nav-target="menu">
+      <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+        <%= link_to "Meetups", "/", class: 'bold' %>
+      </li>
+      <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+        <%= link_to "Conferences", conferences_path, class: 'bold' %>
+      </li>
+      <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+        <%= link_to "About us", "/about", class: 'bold' %>
+      </li>
+            <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+        <%= link_to "News", "/news", class: 'bold' %>
+      </li>
+      <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+        <%= link_to "Sponsors", "/sponsors", class: 'bold' %>
+      </li>
+      <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+        <%= link_to "Contact", "/contact/new", class: 'bold' %>
+      </li>
     </ul>
   </nav>
 </header>
