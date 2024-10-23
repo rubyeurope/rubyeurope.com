@@ -438,3 +438,5 @@ end
 locations[:conferences].each do |conference|
   Conference.find_or_create_by(slug: conference[:slug]).update(conference)
 end
+
+require_relative 'seeds/announcements'

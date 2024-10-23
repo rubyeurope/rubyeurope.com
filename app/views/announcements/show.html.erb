@@ -1,0 +1,27 @@
+<section class="mt-12">
+  <h2 class="text-center text-3xl bold mb-6 text-red">
+    <a href="/news" class="font-bold">News</a> / <%= @announcement.title %>
+  </h2>
+  <ul class="max-w-[800px] space-y-16 mx-auto">
+    <li class="w-full border-b border-gray-light space-y-6 p-3 md:p-8 lg:p-14 2xl:p-12 shadow-around rounded-lg">
+      <div class="pb-4 border-b">
+        <p><%= @announcement.created_at.strftime("%B %d, %Y") %></p>
+      </div>
+      <div class="relative">
+        <%= simple_format(@announcement.description) %>
+      </div>
+
+      <%= image_tag "/news/#{@announcement.slug}.jpg", alt: "Image for this announcement", class: "w-full"  %>
+    </li>
+  </ul>
+  <div class="max-w-[800px] mx-auto mt-8 flex justify-between">
+    <% if @announcement_prev %>
+      <%= link_to "&laquo; Previous".html_safe, "/news/#{@announcement_prev.slug}", class: "w-[140px] bg-red text-center text-white py-2 rounded tracking-wider uppercase font-bold hover:bg-black cursor-pointer" %>
+    <% else %>
+      <span>&nbsp;</span>
+    <% end %>
+    <% if @announcement_next %>
+      <%= link_to "Next &raquo;".html_safe, "/news/#{@announcement_next.slug}", class: "w-[140px] bg-red text-center text-white py-2 rounded tracking-wider uppercase font-bold hover:bg-black cursor-pointer" %>
+    <% end %>
+  </div>
+</section>

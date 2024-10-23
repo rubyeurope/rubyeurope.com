@@ -1,0 +1,41 @@
+<section class="mx-6 md:mx-24 lg:mx-72" data-controller="greeter">
+  <div class="bg-[url('./background-770w.webp')] h-[calc(100vh-80px)] md:h-[calc(100vh-112px)] md:bg-[url('./background-1500w.webp')] lg:bg-[url('./background.webp')] bg-cover bg-right lg:bg-center px-8 lg:px-72 -mx-8 md:-mx-24 lg:-mx-72 bg-opacity-85 portrait:bg-blend-hard-light md:bg-transparent relative flex flex-col justify-center">
+    <h2 class="text-center text-3xl md:text-6xl text-black bold uppercase">
+      Become a sponsor
+    </h2>
+    <h3 class="text-center text-base md:text-xl text-red bold uppercase">Don't Miss The Chance to Shape the Ruby Community</h3>
+    <article class="mx-auto text-center mt-6 md:mt-12">
+      <p class="text-base">
+        Join us in uniting the global Ruby and Ruby on Rails community! As a sponsor, you’ll have the unique opportunity to support innovation, collaborate with top developers, and gain exposure within a passionate, fast-growing network. Don’t miss your chance to contribute to the future of Ruby and showcase your brand to industry leaders and pioneers.
+      </p>
+      <button class="w-full md:w-fit bg-red text-white !mx-auto py-2 px-8 mt-6 md:mt-12 rounded tracking-wider uppercase bold hover:bg-black cursor-pointer" >
+        <%= mail_to "contact@rubyeurope.com", "Fuel our mission" %>
+      </button>
+    </article>
+    <div class="text-center absolute bottom-6 left-1/2 -translate-x-1/2">
+      <p class="uppercase text-white">Meet our Sponsors</p>
+      <button
+        type="button"
+        title="click to scroll"
+        class="border-r-white border-b-white border-b-4 border-r-4 inline-block p-3 animate-bounce"
+        data-action="greeter#scroll">
+      </button>
+    </div>
+  </div>
+
+  <article class="mt-24 md:mt-32">
+    <h2 class="text-center text-3xl md:text-6xl text-red bold uppercase scroll-m-24" data-greeter-target="greeting">
+      SPONSORS
+    </h2>
+    <h3 class="text-center text-base md:text-xl text-black uppercase">Thanks for supporting and growing our community</h3>
+
+    <div class="shadow-around rounded-md py-8 px-14 max-w-72 md:max-w-96 mx-auto my-12 md:mt-24">
+      <%= link_to "https://www.visuality.pl", html_options = { class: "flex", target: "_blank" }  do %>
+        <div class="mx-auto">
+          YOU!
+        </div>
+      <% end %>
+    </div>
+
+  </article>
+</section>
