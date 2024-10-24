@@ -5,7 +5,7 @@
     <% end %>
   </div>
   <nav data-controller="nav" class="flex">
-    <button class="md:hidden" data-action="nav#open" data-nav-target="openBtn">
+    <button class="lg:hidden" data-action="nav#open" data-nav-target="openBtn">
       <div class="bg-black h-[2px] w-6 mb-1"></div>
       <div class="bg-black h-[2px] w-6 mb-1"></div>
       <div class="bg-black h-[2px] w-6"></div>
@@ -17,23 +17,23 @@
       data-action="nav#close"
       data-nav-target="closeBtn">
     </button>
-    <ul class="text-center text-sm lg:text-base bg-white list-style-none hidden md:flex" data-nav-target="menu">
-      <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+    <ul class="text-center text-sm lg:text-base bg-white list-style-none hidden lg:flex" data-nav-target="menu">
+      <li class="md:inline-block md:border-l border-gray px-2 lg:px-5 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
         <%= link_to "Meetups", "/", class: 'bold' %>
       </li>
-      <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+      <li class="md:inline-block md:border-l border-gray px-2 lg:px-5 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
         <%= link_to "Conferences", conferences_path, class: 'bold' %>
       </li>
-      <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+      <li class="md:inline-block md:border-l border-gray px-2 lg:px-5 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
         <%= link_to "About us", "/about", class: 'bold' %>
       </li>
-            <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+            <li class="md:inline-block md:border-l border-gray px-2 lg:px-5 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
         <%= link_to "News", "/news", class: 'bold' %>
       </li>
-      <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+      <li class="md:inline-block md:border-l border-gray px-2 lg:px-5 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
         <%= link_to "Sponsors", "/sponsors", class: 'bold' %>
       </li>
-      <li class="md:inline-block md:border-l border-gray px-2 lg:px-6 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
+      <li class="md:inline-block md:border-l border-gray px-2 lg:px-5 pb-6 md:pb-0 uppercase tracking-wider hover:cursor-pointer hover:text-red">
         <%= link_to "Contact", "/contact/new", class: 'bold' %>
       </li>
     </ul>
