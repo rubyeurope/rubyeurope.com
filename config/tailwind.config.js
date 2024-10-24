@@ -23,7 +23,7 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        red: "#CC342D",
+        red: "#B12626",
         black: "#2C2B39",
         white: "#FBF7F4",
         accent: "#4D7EA8",
@@ -34,6 +34,7 @@ module.exports = {
       },
       boxShadow: {
         top: "0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        around: "2px 2px 15px 5px rgb(0 0 0 / 0.1)",
       },
     },
   },
