@@ -1,0 +1,14 @@
+<li class="w-full border-b border-gray-light space-y-6 p-3 md:p-8 lg:p-14 2xl:p-12 shadow-around rounded-lg">
+  <div class="pb-4 border-b">
+    <h3 class="text-2xl bold text-red"><%= link_to(announcement.title,  "/news/#{announcement.slug}") %></h3>
+    <p class="mt-1"><%= announcement.created_at.strftime("%B %d, %Y") %></p>
+  </div>
+  <div class="pb-4 relative">
+    <%= simple_format(announcement.preview +
+                      link_to(" ...Read more",  "/news/#{announcement.slug}", class: "text-red hover:underline bold")) %>
+  </div>
+
+  <a href="/news/<%= announcement.slug %>" class="w-full">
+    <%= image_tag "/news/#{announcement.slug}.jpg", alt: "Image for this announcement", class: "w-full"  %>
+  </a>
+</li>

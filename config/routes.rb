@@ -8,4 +8,7 @@ Rails.application.routes.draw do
     resources :contact,  :path => :contact
   resources :conferences, only: [:index]
   resources :about, only: [:index]
+  # resources :sponsors, only: [:index]
+
+  resources :announcements, path: :news, only: [:index, :show]
 end
