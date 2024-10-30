@@ -357,6 +357,15 @@ locations = {
       longitude: -3.703524,
       link: 'https://www.madridrb.com/',
       img: '/logos/madrid-rb.png'
+    },
+    {
+      slug: 'tricity-ruby-users-group',
+      name: 'Tricity Ruby Users Group',
+      description: 'Tricity community-driven Ruby Users Group (aka TRUG). We meet once a month to talk about Ruby, Rails and other related technologies.',
+      latitude: 54.3896566,
+      longitude: 18.5817698,
+      link: 'https://trug.pl/',
+      img: '/logos/pl-tricity-trug.svg'
     }
   ],
   conferences: [
