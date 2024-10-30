@@ -348,6 +348,15 @@ locations = {
       longitude: -0.376288,
       link: 'https://valenciarb.org',
       img: '/logos/es-valenciarb.png'
+    },
+    {
+      slug: 'madrid-rb',
+      name: 'Madrid.rb',
+      description: 'Ruby user group in Madrid. Everyone is welcome, regardless of experience or interests!',
+      latitude: 40.416969,
+      longitude: -3.703524,
+      link: 'https://www.madridrb.com/',
+      img: '/logos/madrid-rb.png'
     }
   ],
   conferences: [
