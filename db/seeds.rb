@@ -1,6 +1,15 @@
 locations = {
   meetups: [
     {
+      slug: 'vienna-rb',
+      name: 'Vienna.rb',
+      description: 'Vienna.rb is the meetup for the Ruby community in Vienna. We listen to interesting talks, hang out and have fun.',
+      latitude: 48.20797517109025,
+      longitude: 16.37045758273573,
+      link: 'https://www.meetup.com/vienna-rb/',
+      img: '/logos/vienna-rb.svg'
+    },
+    {
       slug: 'ruby-tuesday-tallinn',
       name: 'Ruby Tuesday Tallinn',
       description: 'Ruby User Group meeting every last Tuesday of the month from 18:00 onward.',
