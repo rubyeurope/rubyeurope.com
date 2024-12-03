@@ -458,8 +458,8 @@ locations = {
     {
       slug: 'euruko-2025',
       name: 'Euruko 2025',
-      event_date: 'Viana do Castelo, Portugal',
-      location: 'September 18-19, 2025',
+      event_date: 'September 18-19, 2025',
+      location: 'Viana do Castelo, Portugal',
       description: 'The largest and longest running annual Ruby conference in Europe, since 2003, that brings you all the good news about Ruby and its friends. Every year it takes place in a different European city, the location being chosen by participants.',
       latitude: 41.6936837,
       longitude: -8.8300416,
