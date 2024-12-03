@@ -464,7 +464,7 @@ locations = {
       latitude: 41.6936837,
       longitude: -8.8300416,
       link: 'https://2025.euruko.org/',
-      img: 'https://2025.euruko.org/images/logo.svg'
+      img: '/logos/euruko-2025.png'
     }
   ],
 }
