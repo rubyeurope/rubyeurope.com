@@ -455,6 +455,17 @@ locations = {
       link: 'https://balticruby.org/',
       img: 'https://thumb.tildacdn.com/tild6166-3665-4835-b736-363836373334/-/format/webp/logovector.png.webp'
     },
+    {
+      slug: 'euruko-2025',
+      name: 'Euruko 2025',
+      event_date: 'September 18-19, 2025',
+      location: 'Viana do Castelo, Portugal',
+      description: 'The largest and longest running annual Ruby conference in Europe, since 2003, that brings you all the good news about Ruby and its friends. Every year it takes place in a different European city, the location being chosen by participants.',
+      latitude: 41.6936837,
+      longitude: -8.8300416,
+      link: 'https://2025.euruko.org/',
+      img: '/logos/euruko-2025.png'
+    }
   ],
 }
 
