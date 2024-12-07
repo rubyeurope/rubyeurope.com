@@ -375,6 +375,15 @@ locations = {
       longitude: 18.5817698,
       link: 'https://trug.pl/',
       img: '/logos/pl-tricity-trug.svg'
+    },
+    {
+      slug: 'nwrug',
+      name: 'North West Ruby User Group',
+      description: 'NWRUG is a Manchester-based community for people interested in the Ruby programming language. We run regular events open to anyone with an interest in Ruby.',
+      latitude: 53.48692428198531,
+      longitude: -2.2405059602566713,
+      link: 'https://nwrug.org',
+      img: '/logos/nwrug.png'
     }
   ],
   conferences: [
