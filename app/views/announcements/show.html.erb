@@ -8,7 +8,7 @@
         <p><%= @announcement.created_at.strftime("%B %d, %Y") %></p>
       </div>
       <div class="relative">
-        <%= simple_format(@announcement.description) %>
+        <%= simple_format(@announcement.description, {}, sanitize: false) %>
       </div>
 
       <%= image_tag "/news/#{@announcement.slug}.jpg", alt: "Image for this announcement", class: "w-full"  %>
