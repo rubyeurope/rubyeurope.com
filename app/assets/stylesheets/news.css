@@ -34,13 +34,11 @@ a.news-discord-link {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
 a.news-discord-link:hover {
   background-color: #4752c4;
   box-shadow: 0 4px 10px rgba(88, 101, 242, 0.6);
 }
 
-/* Focus style for accessibility */
 a.news-discord-link:focus {
   outline: 3px solid rgba(88, 101, 242, 0.8);
 }
