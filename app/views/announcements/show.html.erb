@@ -10,18 +10,16 @@
       <div class="relative">
         <%= simple_format(@announcement.description, {}, sanitize: false) %>
       </div>
-
-      <%= image_tag "/news/#{@announcement.slug}.jpg", alt: "Image for this announcement", class: "w-full"  %>
     </li>
   </ul>
   <div class="max-w-[800px] mx-auto mt-8 flex justify-between">
     <% if @announcement_prev %>
-      <%= link_to "&laquo; Previous".html_safe, "/news/#{@announcement_prev.slug}", class: "w-[140px] bg-red text-center text-white py-2 rounded tracking-wider uppercase font-bold hover:bg-black cursor-pointer" %>
+      <%= link_to "&laquo; Previous".html_safe, "/news/#{@announcement_prev.slug}", class: "min-w-[140px] bg-red text-center text-white py-2 rounded tracking-wider uppercase font-bold hover:bg-black cursor-pointer" %>
     <% else %>
       <span>&nbsp;</span>
     <% end %>
     <% if @announcement_next %>
-      <%= link_to "Next &raquo;".html_safe, "/news/#{@announcement_next.slug}", class: "w-[140px] bg-red text-center text-white py-2 rounded tracking-wider uppercase font-bold hover:bg-black cursor-pointer" %>
+      <%= link_to "Next &raquo;".html_safe, "/news/#{@announcement_next.slug}", class: "min-w-[140px] bg-red text-center text-white py-2 rounded tracking-wider uppercase font-bold hover:bg-black cursor-pointer" %>
     <% end %>
   </div>
 </section>

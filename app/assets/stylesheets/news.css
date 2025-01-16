@@ -1,13 +1,6 @@
-h1.news-title {
-  font-size: x-large;
-}
-
-h1.news-subtitle {
+h3.news-paragraph {
   font-size: large;
-}
-
-h1.news-paragraph {
-  font-size: medium;
+  font-weight: 1000;
 }
 
 a.news-link {
@@ -23,24 +16,7 @@ a.news-link:hover {
 }
 
 a.news-discord-link {
-  display: inline-block;
   padding: 10px 20px;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #5865F2;
-  border-radius: 8px;
-  font-weight: bold;
-  text-align: center;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-a.news-discord-link:hover {
-  background-color: #4752c4;
-  box-shadow: 0 4px 10px rgba(88, 101, 242, 0.6);
-}
-
-a.news-discord-link:focus {
-  outline: 3px solid rgba(88, 101, 242, 0.8);
 }
 
 img.news-full-image {
@@ -85,6 +61,3 @@ img.news-full-image {
   font-weight: 1000;
 }
 
-.news-box-list .news-text {
-  text-decoration: underline;
-}
