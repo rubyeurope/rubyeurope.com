@@ -243,12 +243,12 @@ locations = {
     },
     {
       slug: 'ruby-on-rails-latvia',
-      name: 'Ruby on Rails Latvia',
-      description: 'Ruby and Rails community in Latvia and city as Riga, Ventspils, Liepaja, Valmiera, Jelgava and etc.',
+      name: 'Latvian Ruby community',
+      description: 'Ruby (and Rails) community in Latvia and city as Riga, Ventspils, Liepaja, Valmiera, Jelgava and etc.',
       latitude: 56.96977785725791,
       longitude: 24.103657352623568,
-      link: 'https://www.meetup.com/ruby-on-rails-latvia/',
-      img: 'https://secure.meetupstatic.com/photos/event/e/3/8/c/clean_310738252.webp'
+      link: 'https://lu.ma/latviarb',
+      img: '/logos/latvianrb.jpeg'
     },
     {
       slug: 'nantes-rb',
