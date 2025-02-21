@@ -8,7 +8,9 @@ servers:
 proxy:
   app_port: 3000
   ssl: true
-  host: do.rubyeurope.com
+  hosts:
+    - rubyeurope.com
+    - www.rubyeurope.com
   healthcheck:
     interval: 2
 
@@ -25,6 +27,6 @@ env:
   clear:
     WEB_CONCURRENCY: 0
     RAILS_ENV: production
-    HOST: do.rubyeurope.com
+    HOST: rubyeurope.com
   secret:
     - SECRET_KEY_BASE
