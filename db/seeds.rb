@@ -384,6 +384,15 @@ locations = {
       longitude: -2.2405059602566713,
       link: 'https://nwrug.org',
       img: '/logos/nwrug.png'
+    },
+    {
+      slug: 'oslo-ruby-meetup',
+      name: 'Oslo Ruby Meetup',
+      description: 'Oslo Ruby Meetup is a community based in Norway, with events hosted in or near Oslo. Everyone interested in the Ruby programming language is welcome, and we have talks about Ruby as well as about experience about running Ruby on Rails in production from companies building their business on the Rails web application framework. Please also feel free to reach out to the organisers to be added to our organising Discord 🚀',
+      latitude: 59.911150,
+      longitude: 10.750314,
+      link: 'https://www.meetup.com/ruby-meetup-oslo',
+      img: '/logos/oslo-ruby-meetup.png'
     }
   ],
   conferences: [
