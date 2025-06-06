@@ -393,6 +393,15 @@ locations = {
       longitude: 10.750314,
       link: 'https://www.meetup.com/ruby-meetup-oslo',
       img: '/logos/oslo-ruby-meetup.png'
+    },
+    {
+      slug: 'modena-rb',
+      name: 'Modena.rb',
+      description: 'A group of Ruby enthusiasts meeting in lovely Modena, Italy',
+      latitude: 44.6458,
+      longitude: 10.9258,
+      link: 'https://www.meetup.com/modena-rb',
+      img: '/logos/modena-rb.png'
     }
   ],
   conferences: [
@@ -483,15 +492,6 @@ locations = {
       longitude: -8.8300416,
       link: 'https://2025.euruko.org/',
       img: '/logos/euruko-2025.png'
-    },
-    {
-      slug: 'modena-rb',
-      name: 'Modena.rb',
-      description: 'A group of Ruby enthusiasts meeting in lovely Modena, Italy',
-      latitude: 44.6458,
-      longitude: 10.9258,
-      link: 'https://www.meetup.com/modena-rb',
-      img: '/logos/modena-rb.png'
     }
   ],
 }
