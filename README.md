@@ -1,65 +1,46 @@
 # Ruby Europe
 
-Repository used for Ruby Europe site
+The Ruby Europe website — a static single-page site built with Jekyll.
 
-Production at: https://rubyeurope.com
+Production: https://rubyeurope.com
 
+## What this is
 
-## Contributing Changes
+A low-maintenance marketing single-pager for the Ruby Europe initiative. It
+highlights what Ruby Europe does, who's behind it, the Ruby + AI meetups, and
+how to join — and hands off dynamic data (event listings, recordings, the full
+list of European Ruby communities) to [rubyevents.org](https://www.rubyevents.org),
+[Luma](https://luma.com/rubyeurope), and [YouTube](https://youtube.com/@RubyEurope).
 
-As an open-source project hosted on GitHub at rubyeurope/rubyeurope.com, we welcome contributions, especially for updating information about local Ruby meetups and conferences. The `db/seeds.rb` file is used to populate the database with each deployment, so put new meetups and conferences there.
+## Development
 
-An example Pull Request: https://github.com/rubyeurope/rubyeurope.com/pull/1
+Requires Ruby and Node (managed via [mise](https://mise.jdx.dev)).
 
-Here's how to contribute:
+```sh
+mise install
+bundle install
+bundle exec jekyll serve
+```
 
-1. Fork the repository and create your feature branch:
-   ```
-   git checkout -b my-new-feature
-   ```
+The site serves at http://localhost:4000.
 
-2. For new meetups or conferences:
-   - Add the event logo to the `public/logos` folder. Name it consistently with existing logos.
-   - Update `db/seeds.rb` with the new event information.
+## Content
 
-3. Make your changes in the relevant files.
+Most variable content lives in `_data/`:
 
-4. Commit your changes:
-   ```
-   git commit -am 'Add some content'
-   ```
+- `_data/team.yml` — team members
+- `_data/meetups.yml` — Ruby + AI meetups and hand-off links
+- `_data/partners.yml` — partner meetup logo wall
 
-5. Push to the branch:
-   ```
-   git push origin my-new-feature
-   ```
+Section copy lives in `_includes/sections/`. Styles are plain SCSS in `_sass/`.
 
-6. Create a new Pull Request.
+## Deployment
 
-## Local Installation
+Pushed to `main`, built and deployed to GitHub Pages by
+`.github/workflows/jekyll.yml`. The custom domain is set in `CNAME`.
 
-Follow these steps to set up the project locally:
+## Design
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/rubyeurope/ruby-europe.git
-   cd ruby-europe
-   ```
-
-2. Install Ruby dependencies:
-   ```
-   bundle install
-   ```
-
-3. Set up the database:
-   - Create database, run migrations and seed data:
-     ```
-     rails db:setup
-     ```
-
-4. Start the Rails server:
-   ```
-   bin/dev # use to enable tailwind and hot reload
-   ```
-
-5. Visit `http://localhost:3000` or `http://0.0.0.0:3000` in your web browser to see the application running (Google maps won't work otherwise).
+The visual direction is intentionally a placeholder scaffold. See
+`docs/design-direction.md` for scope and the open design decisions handled by
+the design-flow pass.

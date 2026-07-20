@@ -1,1 +1,8 @@
-{}
+{
+  "private": true,
+  "packageManager": "pnpm@11.6.0",
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.10.3",
+    "prettier": "^3.8.4"
+  }
+}

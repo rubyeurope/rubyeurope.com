@@ -1,0 +1,29 @@
+# Team members shown in the "Team" section.
+# TODO: replace stub headshots (cropped from the value-pack PDF) with high-res PNGs.
+- name: Mariusz Kozieł
+  role: >-
+    Founder of Ruby Europe and the driving force behind the vision of a strong
+    European Ruby ecosystem.
+  photo: team/mariusz-koziel.png
+  linkedin: https://www.linkedin.com/in/koziel-mariusz
+
+- name: Paweł Strzałkowski
+  role: >-
+    Founding Supporter helping turn the vision into practical structure and
+    long-term momentum.
+  photo: team/pawel-strzalkowski.png
+  linkedin: https://www.linkedin.com/in/pawel-strzalkowski
+
+- name: Hans Schnedlitz
+  role: >-
+    Community builder expanding the network by connecting local groups and
+    engaging organizers.
+  photo: team/hans-schnedlitz.png
+  linkedin: https://www.linkedin.com/in/hschne
+
+- name: Dawid Cekiera
+  role: >-
+    Growth Lead helping the community grow through content, storytelling, and
+    outreach.
+  photo: team/dawid-cekiera.png
+  linkedin: https://www.linkedin.com/in/dawid-cekiera

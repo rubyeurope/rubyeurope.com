@@ -1,0 +1,158 @@
+// Placeholder layout + component scaffolding. Structure only, no final design.
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem var(--gutter);
+  flex-wrap: wrap;
+}
+
+.site-header__logo img {
+  height: 2.25rem;
+  width: auto;
+}
+
+.site-nav {
+  display: flex;
+  gap: clamp(0.75rem, 2vw, 1.75rem);
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--fg);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.9rem;
+}
+
+.site-nav a:hover {
+  color: var(--brand);
+}
+
+.section {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding: var(--section-gap) var(--gutter);
+}
+
+.section--hero {
+  text-align: center;
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.btn--ghost {
+  border: 2px solid var(--brand);
+  color: var(--brand);
+}
+
+.cta-row,
+.join-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.section--hero .cta-row {
+  justify-content: center;
+}
+
+// Simple grids
+.pillars,
+.value-grid,
+.team-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 40rem) {
+  .pillars,
+  .value-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.team-member__photo {
+  border-radius: 0.5rem;
+}
+
+// Meetups
+.meetup-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.meetup {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.meetup__date {
+  color: var(--muted);
+  min-width: 6rem;
+}
+
+// Partner wall
+.partner-wall {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.partner img {
+  max-height: 3rem;
+  margin-inline: auto;
+  display: block;
+}
+
+// Footer
+.site-footer {
+  text-align: center;
+  padding: var(--section-gap) var(--gutter);
+}
+
+.site-footer__brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--brand);
+  margin: 0;
+}
+
+.site-footer__links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}

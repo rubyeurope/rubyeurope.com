@@ -1,0 +1,26 @@
+// Brand tokens. These carry over the existing Ruby Europe identity.
+// The design-flow pass owns the final visual system (dark vs light, scale, motion).
+:root {
+  // Colors (from the current site + value pack)
+  --color-red: #b12626;
+  --color-ink: #2c2b39;
+  --color-paper: #fbf7f4;
+  --color-accent: #4d7ea8;
+  --color-gray-dark: #828489;
+  --color-gray-light: #dcdcdc;
+
+  // Semantic (placeholder — light theme; design-flow may invert to dark)
+  --bg: var(--color-paper);
+  --fg: var(--color-ink);
+  --brand: var(--color-red);
+  --muted: var(--color-gray-dark);
+
+  // Typography
+  --font-display: "Kanit", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  // Layout
+  --measure: 68rem;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --section-gap: clamp(3.5rem, 9vw, 7rem);
+}

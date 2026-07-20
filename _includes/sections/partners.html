@@ -1,0 +1,23 @@
+<section class="section section--partners" id="partners">
+  <h2>Part of the Ruby Europe family</h2>
+  <p class="lead">Local communities across Europe growing together.</p>
+
+  <ul class="partner-wall">
+    {% for partner in site.data.partners.partners %}
+      <li class="partner">
+        {% if partner.link %}
+          <a href="{{ partner.link }}" target="_blank" rel="noopener" title="{{ partner.name }}">
+            <img src="{{ partner.logo | prepend: '/assets/images/' | relative_url }}" alt="{{ partner.name }}" />
+          </a>
+        {% else %}
+          <img src="{{ partner.logo | prepend: '/assets/images/' | relative_url }}" alt="{{ partner.name }}" title="{{ partner.name }}" />
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="partner-note">
+    Looking for a Ruby community near you? Explore the maintained list on
+    <a href="{{ site.data.partners.rubyevents_hub }}" target="_blank" rel="noopener">rubyevents.org</a>.
+  </p>
+</section>

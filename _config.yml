@@ -1,0 +1,61 @@
+url: "https://rubyeurope.com"
+baseurl: ""
+lang: en
+title: "Ruby Europe"
+tagline: "A shared home for the Ruby community in Europe"
+description: "Ruby Europe is a non-profit initiative connecting Ruby meetups, organizers, and developers across Europe. We support local communities, not replace them."
+author:
+  name: Ruby Europe
+  email: contact@rubyeurope.com
+
+github_repo: "rubyeurope/rubyeurope.com"
+github_branch: "main"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll_picture_tag
+  - jekyll-og-image
+
+# jekyll-seo-tag
+logo: /assets/images/ruby-europe-logo.svg
+image: /assets/images/og.jpg
+twitter:
+  username: RubyEurope
+  card: summary_large_image
+social:
+  name: Ruby Europe
+  links:
+    - "https://x.com/RubyEurope"
+    - "https://youtube.com/@RubyEurope"
+    - "https://linkedin.com/company/ruby-europe"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og.jpg
+
+sass:
+  style: compressed
+
+# jekyll_picture_tag
+picture:
+  source: "assets/images/"
+  output: "assets/images/generated"
+
+exclude:
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - package.json
+  - pnpm-lock.yaml
+  - node_modules
+  - .prettierrc
+  - .playwright-mcp
+  - docs
+  - mise.toml
+  - LICENSE

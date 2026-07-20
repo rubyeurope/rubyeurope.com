@@ -1,0 +1,25 @@
+<section class="section section--meetups" id="meetups">
+  <h2>Ruby + AI Meetups</h2>
+  <p class="lead">
+    We host Ruby + AI meetups across Europe — bringing local communities together
+    around the ideas shaping Ruby's future.
+  </p>
+
+  <ul class="meetup-list">
+    {% for event in site.data.meetups.events %}
+      <li class="meetup">
+        <span class="meetup__date">{{ event.date | date: "%b %Y" }}</span>
+        <a class="meetup__title" href="{{ event.link }}" target="_blank" rel="noopener">
+          {{ event.title }}
+        </a>
+        <span class="meetup__place">{{ event.city }}, {{ event.country }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="meetup-links">
+    Watch the talks on <a href="{{ site.data.meetups.youtube }}" target="_blank" rel="noopener">YouTube</a>,
+    browse the full archive on <a href="{{ site.data.meetups.rubyevents_hub }}" target="_blank" rel="noopener">rubyevents.org</a>,
+    and see what's next on <a href="{{ site.data.meetups.luma }}" target="_blank" rel="noopener">Luma</a>.
+  </p>
+</section>

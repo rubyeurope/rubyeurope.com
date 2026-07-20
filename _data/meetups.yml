@@ -1,0 +1,24 @@
+# Ruby + AI meetups we have hosted. Kept intentionally short and static.
+# Recordings and the full, maintained list live on rubyevents.org and YouTube.
+rubyevents_hub: https://www.rubyevents.org/events/rubyeurope-meetup
+luma: https://luma.com/rubyeurope
+youtube: https://youtube.com/@RubyEurope
+
+events:
+  - title: Ruby + AI Meetup Paris
+    city: Paris
+    country: France
+    date: 2025-10-07
+    link: https://www.rubyevents.org/talks/paris-rb-meetup-october-2025
+
+  - title: Ruby + AI Meetup Berlin
+    city: Berlin
+    country: Germany
+    date: 2025-06-24
+    link: https://www.rubyevents.org/talks/berlin-ruby-ai-meetup-june-2025
+
+  - title: Ruby + AI Meetup London
+    city: London
+    country: United Kingdom
+    date: 2025-06-17
+    link: https://www.rubyevents.org/talks/london-ruby-ai-meetup-june-2025
