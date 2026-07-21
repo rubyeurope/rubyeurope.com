@@ -1,12 +1,73 @@
 <footer class="site-footer">
-  <p class="site-footer__brand">Ruby Europe</p>
-  <p class="site-footer__tagline">Local roots. European reach.</p>
+  <div class="site-footer__inner">
+    <div class="site-footer__identity">
+      <a
+        class="site-footer__logo"
+        href="{{ '/#top' | relative_url }}"
+        aria-label="Ruby Europe home"
+      >
+        <img
+          src="{{ '/assets/images/ruby-europe-logo.svg' | relative_url }}"
+          alt="Ruby Europe"
+          width="829"
+          height="172"
+          loading="lazy"
+        />
+      </a>
+      <p>Local roots. European reach.</p>
+    </div>
 
-  <ul class="site-footer__links">
-    <li><a href="https://discord.gg/VQpDWPpBZe" target="_blank" rel="noopener">Discord</a></li>
-    <li><a href="mailto:contact@rubyeurope.com">contact@rubyeurope.com</a></li>
-    <li><a href="https://x.com/RubyEurope" target="_blank" rel="noopener">X</a></li>
-    <li><a href="https://youtube.com/@RubyEurope" target="_blank" rel="noopener">YouTube</a></li>
-    <li><a href="https://linkedin.com/company/ruby-europe" target="_blank" rel="noopener">LinkedIn</a></li>
-  </ul>
+    <nav class="site-footer__nav" aria-label="Footer">
+      <p class="site-footer__label">Explore</p>
+      <ul class="site-footer__links">
+        <li><a href="{{ '/#who-we-are' | relative_url }}">Who we are</a></li>
+        <li><a href="{{ '/#what-we-do' | relative_url }}">What we do</a></li>
+        <li><a href="{{ '/#highlights' | relative_url }}">Highlights</a></li>
+        <li><a href="{{ '/#team' | relative_url }}">Team</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-footer__contact">
+      <p class="site-footer__label">Connect</p>
+      <ul class="site-footer__links">
+        <li>
+          <a
+            href="https://discord.gg/VQpDWPpBZe"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Discord</a
+          >
+        </li>
+        <li><a href="mailto:contact@rubyeurope.com">Email</a></li>
+        <li>
+          <a
+            href="https://x.com/RubyEurope"
+            target="_blank"
+            rel="noopener noreferrer"
+            >X</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://youtube.com/@RubyEurope"
+            target="_blank"
+            rel="noopener noreferrer"
+            >YouTube</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://linkedin.com/company/ruby-europe"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="site-footer__legal">
+    Ruby Europe is a community-led non-profit initiative.
+  </p>
 </footer>

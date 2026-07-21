@@ -1,23 +1,41 @@
-<section class="section section--team" id="team">
-  <h2>The team</h2>
-  <p class="lead">Ruby Europe is built by people who care about the ecosystem.</p>
+<section class="section section--team" id="team" aria-labelledby="team-title">
+  <div class="section-heading section-heading--split">
+    <div>
+      <p class="eyebrow">Accountable people</p>
+      <h2 id="team-title">The team</h2>
+    </div>
+    <p class="lead">
+      Ruby Europe is built by community organizers and contributors who care
+      about a stronger European Ruby ecosystem.
+    </p>
+  </div>
 
   <ul class="team-grid">
-    {% for member in site.data.team %}
-      <li class="team-member">
-        <img
-          class="team-member__photo"
-          src="{{ member.photo | prepend: '/assets/images/' | relative_url }}"
-          alt="{{ member.name }}"
-        />
-        <div class="team-member__body">
-          <h3 class="team-member__name">{{ member.name }}</h3>
-          <p class="team-member__role">{{ member.role }}</p>
-          {% if member.linkedin %}
-            <a class="team-member__link" href="{{ member.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
-          {% endif %}
-        </div>
-      </li>
-    {% endfor %}
+    {%- for member in site.data.team -%}
+    <li class="team-member">
+      <img
+        class="team-member__photo"
+        src="{{ member.photo | prepend: '/assets/images/' | relative_url }}"
+        alt="Portrait of {{ member.name }}"
+        width="720"
+        height="600"
+        loading="lazy"
+      />
+      <div class="team-member__body">
+        <h3 class="team-member__name">{{ member.name }}</h3>
+        <p class="team-member__role">{{ member.role }}</p>
+        {%- if member.linkedin -%}
+        <a
+          class="arrow-link team-member__link"
+          href="{{ member.linkedin }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn <span aria-hidden="true">↗</span>
+        </a>
+        {%- endif -%}
+      </div>
+    </li>
+    {%- endfor -%}
   </ul>
 </section>

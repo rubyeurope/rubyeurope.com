@@ -1,17 +1,36 @@
-<section class="section section--join" id="join">
-  <h2>You already belong here</h2>
-  <p class="lead">
-    If you care about Ruby — if you organize, speak, mentor, or want to learn — you
-    already belong here. Let's shape the future of Ruby in Europe. Together.
-  </p>
+<section class="section section--join" id="join" aria-labelledby="join-title">
+  <div class="join-layout">
+    <div class="join-layout__content">
+      <p class="eyebrow">Join the network</p>
+      <h2 id="join-title">You already belong here.</h2>
+      <p class="lead">
+        Organize, speak, mentor, learn, or simply meet Ruby people beyond your
+        city. Join the conversation and contribute at your own pace.
+      </p>
 
-  <div class="join-actions">
-    <a class="btn btn--primary" href="https://discord.gg/VQpDWPpBZe" target="_blank" rel="noopener">Join the Discord</a>
-    <a class="btn btn--ghost" href="mailto:contact@rubyeurope.com">Reach out</a>
-  </div>
+      <div class="join-actions">
+        <a
+          class="btn btn--primary btn--large"
+          href="https://discord.gg/VQpDWPpBZe"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Join the Discord</a
+        >
+        <a class="join-email" href="mailto:contact@rubyeurope.com">
+          Prefer email? Reach out directly
+        </a>
+      </div>
+    </div>
 
-  <div class="join-discord">
-    <img src="{{ '/assets/images/discord-qr.png' | relative_url }}" alt="Ruby Europe Discord QR code" width="200" height="200" />
-    <p>Scan to join the conversation on Discord.</p>
+    <div class="join-discord">
+      <img
+        src="{{ '/assets/images/discord-qr.png' | relative_url }}"
+        alt="QR code to join the Ruby Europe Discord"
+        width="450"
+        height="450"
+        loading="lazy"
+      />
+      <p>Scan to join on Discord</p>
+    </div>
   </div>
 </section>

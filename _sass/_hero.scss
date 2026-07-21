@@ -1,0 +1,92 @@
+@use "tokens" as tokens;
+
+.hero {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-block-size: clamp(34rem, 74svh, 48rem);
+  overflow: hidden;
+  background: var(--color-bg-primary);
+  border-block-end: var(--border-width-thin) solid var(--color-border-secondary);
+}
+
+// Decorative Europe map + faceted rays, bleeding off the right and dissolving
+// into the white canvas behind the copy. Purely decorative (aria-hidden).
+.hero__field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: right center;
+  opacity: 0.6;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 34%,
+    rgb(0 0 0 / 40%) 58%,
+    #000 88%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 34%,
+    rgb(0 0 0 / 40%) 58%,
+    #000 88%
+  );
+}
+
+.hero__inner {
+  display: grid;
+  align-items: center;
+  gap: var(--space-7);
+  inline-size: min(100%, var(--max-width-page));
+  margin-inline: auto;
+  padding-block: var(--space-8);
+  padding-inline: var(--gutter-page);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  min-inline-size: 0;
+}
+
+.hero__title {
+  max-inline-size: 10ch;
+}
+
+.hero__title-accent {
+  display: block;
+  color: var(--color-text-brand);
+}
+
+.hero__lead {
+  max-inline-size: 34ch;
+  margin-block-start: var(--space-5);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
+}
+
+@media (min-width: tokens.$breakpoint-md) {
+  .hero__inner {
+    padding-block: var(--space-9);
+  }
+
+  .hero__field {
+    opacity: 1;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 26%,
+      rgb(0 0 0 / 45%) 52%,
+      #000 82%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 26%,
+      rgb(0 0 0 / 45%) 52%,
+      #000 82%
+    );
+  }
+}

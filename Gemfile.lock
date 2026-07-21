@@ -73,11 +73,6 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
-    jekyll-og-image (2.1.1)
-      jekyll (>= 3.4, < 5.0)
-      jekyll-seo-tag (~> 2.8)
-      ruby-vips (~> 2.2.0)
-      zeitwerk (~> 2.6)
     jekyll-sass-converter (3.1.0)
       sass-embedded (~> 1.75)
     jekyll-seo-tag (2.9.0)
@@ -159,7 +154,6 @@ GEM
       unicode-display_width (>= 1.1.1, < 3)
     unicode-display_width (2.6.0)
     webrick (1.9.2)
-    zeitwerk (2.8.2)
 
 PLATFORMS
   aarch64-linux-android
@@ -184,7 +178,6 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
-  jekyll-og-image
   jekyll-seo-tag
   jekyll-sitemap
   jekyll_picture_tag
@@ -223,7 +216,6 @@ CHECKSUMS
   http_parser.rb (0.8.1) sha256=9ae8df145b39aa5398b2f90090d651c67bd8e2ebfe4507c966579f641e11097a
   i18n (1.15.2) sha256=00f9eb62412fe593b2a65a97daa75300d37abb8f7202ec748e94b6d46a9dd1b5
   jekyll (4.4.1) sha256=4c1144d857a5b2b80d45b8cf5138289579a9f8136aadfa6dd684b31fe2bc18c1
-  jekyll-og-image (2.1.1) sha256=0d535155abd0c5753f3ee0003ba1ff4051d17eb6b876c44c9d4a58fe0b796732
   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
   jekyll-seo-tag (2.9.0) sha256=0260015a8e1df9bf195cdfb0c675b7b2883fd8cbf12556e1c1cbe36a831c6852
   jekyll-sitemap (1.4.0) sha256=0de08c5debc185ea5a8f980e1025c7cd3f8e0c35c8b6ef592f15c46235cf4218
@@ -267,7 +259,6 @@ CHECKSUMS
   terminal-table (3.0.2) sha256=f951b6af5f3e00203fb290a669e0a85c5dd5b051b3b023392ccfd67ba5abae91
   unicode-display_width (2.6.0) sha256=12279874bba6d5e4d2728cef814b19197dbb10d7a7837a869bab65da943b7f5a
   webrick (1.9.2) sha256=beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131
-  zeitwerk (2.8.2) sha256=7212a61311083c604184b1ea2574b9aa05cd14f855a0841c06985cabe9181d12
 
 BUNDLED WITH
   4.0.16

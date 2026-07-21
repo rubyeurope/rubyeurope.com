@@ -1,11 +1,38 @@
-<header class="site-header">
-  <a class="site-header__logo" href="#top" aria-label="Ruby Europe home">
-    <img src="{{ '/assets/images/ruby-europe-logo.svg' | relative_url }}" alt="Ruby Europe" />
+<header class="site-header" data-site-header>
+  <a
+    class="site-header__logo"
+    href="{{ '/#top' | relative_url }}"
+    aria-label="Ruby Europe home"
+  >
+    <img
+      src="{{ '/assets/images/ruby-europe-logo.svg' | relative_url }}"
+      alt="Ruby Europe"
+      width="829"
+      height="172"
+    />
   </a>
-  <nav class="site-nav" aria-label="Primary">
-    <a href="#who-we-are">Who we are</a>
-    <a href="#what-we-do">What we do</a>
-    <a href="#team">Team</a>
-    <a href="#join">Join</a>
+
+  <button
+    class="site-nav__toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="primary-navigation"
+    data-nav-toggle
+  >
+    <span class="site-nav__menu-label">Menu</span>
+    <span class="site-nav__close-label">Close</span>
+    <span class="site-nav__icon" aria-hidden="true"><span></span></span>
+  </button>
+
+  <nav
+    class="site-nav"
+    id="primary-navigation"
+    aria-label="Primary"
+    data-site-nav
+  >
+    <a href="{{ '/#who-we-are' | relative_url }}">Who we are</a>
+    <a href="{{ '/#what-we-do' | relative_url }}">What we do</a>
+    <a href="{{ '/#team' | relative_url }}">Team</a>
+    <a href="{{ '/#join' | relative_url }}">Join</a>
   </nav>
 </header>

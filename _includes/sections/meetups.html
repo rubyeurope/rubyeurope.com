@@ -1,25 +1,65 @@
-<section class="section section--meetups" id="meetups">
-  <h2>Ruby + AI Meetups</h2>
-  <p class="lead">
-    We host Ruby + AI meetups across Europe — bringing local communities together
-    around the ideas shaping Ruby's future.
-  </p>
+<section
+  class="section section--highlights"
+  id="highlights"
+  aria-labelledby="highlights-title"
+>
+  <div class="section-heading section-heading--split">
+    <div>
+      <p class="eyebrow">The network in practice</p>
+      <h2 id="highlights-title">Community Highlights</h2>
+    </div>
+    <p class="lead">
+      A bounded selection of local collaborations and recorded work supported by
+      Ruby Europe.
+    </p>
+  </div>
 
-  <ul class="meetup-list">
-    {% for event in site.data.meetups.events %}
-      <li class="meetup">
-        <span class="meetup__date">{{ event.date | date: "%b %Y" }}</span>
-        <a class="meetup__title" href="{{ event.link }}" target="_blank" rel="noopener">
-          {{ event.title }}
+  <ol class="highlight-list">
+    {%- for highlight in site.data.meetups.highlights -%}
+    <li class="highlight">
+      <div class="highlight__content">
+        <p class="highlight__meta">
+          <time datetime="{{ highlight.date }}"
+            >{{ highlight.date | date: "%B %Y" }}</time
+          >
+          <span>{{ highlight.city }}, {{ highlight.country }}</span>
+        </p>
+        <h3>{{ highlight.title }}</h3>
+        <p>{{ highlight.summary }}</p>
+        <a
+          class="arrow-link"
+          href="{{ highlight.link }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ highlight.link_label }}
+          <span aria-hidden="true">↗</span>
         </a>
-        <span class="meetup__place">{{ event.city }}, {{ event.country }}</span>
-      </li>
-    {% endfor %}
-  </ul>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ol>
 
-  <p class="meetup-links">
-    Watch the talks on <a href="{{ site.data.meetups.youtube }}" target="_blank" rel="noopener">YouTube</a>,
-    browse the full archive on <a href="{{ site.data.meetups.rubyevents_hub }}" target="_blank" rel="noopener">rubyevents.org</a>,
-    and see what's next on <a href="{{ site.data.meetups.luma }}" target="_blank" rel="noopener">Luma</a>.
+  <p class="highlight-resources">
+    Explore more recordings on
+    <a
+      href="{{ site.data.meetups.youtube }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      >YouTube</a
+    >
+    and
+    <a
+      href="{{ site.data.meetups.rubyevents_hub }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      >rubyevents.org</a
+    >, or see upcoming events on
+    <a
+      href="{{ site.data.meetups.luma }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Luma</a
+    >.
   </p>
 </section>

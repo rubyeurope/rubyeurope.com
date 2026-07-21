@@ -15,11 +15,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll_picture_tag
-  - jekyll-og-image
 
 # jekyll-seo-tag
 logo: /assets/images/ruby-europe-logo.svg
-image: /assets/images/og.jpg
+image:
+  path: /assets/images/og.png
+  width: 1200
+  height: 630
+  alt: "Ruby Europe — A shared home for the Ruby community in Europe"
 twitter:
   username: RubyEurope
   card: summary_large_image
@@ -34,7 +37,11 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/og.jpg
+      image:
+        path: /assets/images/og.png
+        width: 1200
+        height: 630
+        alt: "Ruby Europe — A shared home for the Ruby community in Europe"
 
 sass:
   style: compressed

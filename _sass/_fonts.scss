@@ -1,23 +1,31 @@
-// Self-hosted display font. Body font (Inter) is left to the design-flow pass
-// to wire up (self-host or system stack); a system fallback is used for now.
+@font-face {
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/Kanit-Light.ttf") format("truetype");
+}
+
 @font-face {
   font-family: "Kanit";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/assets/fonts/Kanit-Regular.ttf") format("truetype");
+  src: url("../fonts/Kanit-Regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Kanit";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("/assets/fonts/Kanit-SemiBold.ttf") format("truetype");
+  src: url("../fonts/Kanit-SemiBold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Kanit";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/assets/fonts/Kanit-Bold.ttf") format("truetype");
+  src: url("../fonts/Kanit-Bold.ttf") format("truetype");
 }

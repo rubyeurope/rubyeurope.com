@@ -1,9 +1,30 @@
 ---
 layout: default
+title: Page not found
 permalink: /404.html
+description: The requested Ruby Europe page could not be found.
 ---
 
-<section class="section section--error">
-  <h1>Page not found</h1>
-  <p>That page does not exist. Head back to the <a href="/">Ruby Europe home</a>.</p>
+<section class="section section--error" aria-labelledby="error-title">
+  <div class="error-layout">
+    <div class="error-layout__content">
+      <p class="eyebrow">Error 404</p>
+      <h1 id="error-title">Page not found.</h1>
+      <p class="lead">
+        The page you were looking for does not exist or may have moved.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="{{ '/#top' | relative_url }}"
+          >Return home</a
+        >
+        <a class="btn btn--ghost" href="{{ '/#join' | relative_url }}"
+          >Join Ruby Europe</a
+        >
+      </div>
+    </div>
+
+    <div class="error-layout__art" aria-hidden="true">
+      <span>404</span>
+    </div>
+  </div>
 </section>
