@@ -26,13 +26,13 @@ The site serves at http://localhost:4000.
 
 ## Content
 
-Most variable content lives in `_data/`:
+Variable content lives in `_data/`:
 
 - `_data/team.yml` — team members
-- `_data/meetups.yml` — Ruby + AI meetups and hand-off links
 - `_data/partners.yml` — partner meetup logo wall
 
-Section copy lives in `_includes/sections/`. Styles are plain SCSS in `_sass/`.
+Section copy and community highlights live in `_includes/sections/`. Styles are
+plain SCSS in `_sass/`.
 
 ## Deployment
 

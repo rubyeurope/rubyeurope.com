@@ -11,7 +11,7 @@ a news/announcements section, a Mailchimp newsletter, and a contact form. All of
 it needed ongoing data upkeep, and it didn't actually sell the initiative.
 
 This rebuild is a **static Jekyll single-pager**: no database, no data to keep
-current. It sells what Ruby Europe *is*, shows who's behind it, highlights the
+current. It sells what Ruby Europe _is_, shows who's behind it, highlights the
 Ruby + AI meetups, and points people to Discord — while handing off anything
 that needs curation to rubyevents.org, Luma, and YouTube.
 
@@ -34,29 +34,25 @@ that needs curation to rubyevents.org, Luma, and YouTube.
 
 1. **Hero** — "Grow your Ruby meetup" / "A shared home for the Ruby community in
    Europe" + CTAs (Join the Discord, Reach out).
-2. **Who we are** — non-profit initiative; connect local meetups; *support local
-   communities, not replace them*.
-3. **What we do** — the two pillars: Community + Education.
-4. **Ruby + AI Meetups** — Paris / Berlin / London, linking out to recordings
-   (YouTube, rubyevents) and Luma for upcoming.
-5. **For organizers** — value (visibility, org support, speakers, trust/badge) +
-   how joining works (reach out → connect → grow) + value-pack PDF link.
-6. **The Team** — Mariusz, Paweł, Hans, Dawid, with LinkedIn links.
-7. **Partner meetups** — logo wall of European Ruby communities, linking out to
-   rubyevents.org for the maintained list.
-8. **Join / CTA** — Discord + email + socials.
-9. **Footer.**
+2. **Who we are** — a strong non-profit thesis; connect local meetups while
+   supporting local autonomy.
+3. **Community Highlights** — bounded, evidence-linked examples of the network
+   in practice.
+4. **For organizers** — practical value, flexible participation, Discord, and
+   the value-pack PDF.
+5. **The Team** — Mariusz, Paweł, Hans, Dawid, with LinkedIn links.
+6. **Join / CTA** — Discord + email.
+7. **Footer** — essential anchors and social destinations.
 
-Nav exposes: Who we are · What we do · Team · Join. (Meetups intentionally not
-in the nav.)
+Nav exposes every main section: Who we are · Highlights · For organizers · Team
+· Join.
 
 ## Content model (settled)
 
-- `_data/team.yml`, `_data/meetups.yml`, `_data/partners.yml` drive the variable
-  content.
+- `_data/team.yml` drives the variable content.
 - Socials are inline in the markup (Discord, email, and the social accounts each
   get distinct treatment) rather than in a data file.
-- Static prose lives in `_includes/sections/`.
+- Static prose and community highlights live in `_includes/sections/`.
 
 ## Brand tokens (carry over — keep the vibe)
 
@@ -81,7 +77,5 @@ in the nav.)
 
 - **Team headshots** in `assets/images/team/` are low-res crops from the
   value-pack PDF as stand-ins — replace with high-res PNGs.
-- **Partner links:** `_data/partners.yml` has empty `link:` fields — point each
-  to its rubyevents.org page (or the group's own site) during the content pass.
 - **OG image:** regenerate a fresh one once the visual direction lands.
 - Reference material: value-pack deck at `assets/ruby-europe-value-pack.pdf`.

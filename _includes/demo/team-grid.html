@@ -1,0 +1,28 @@
+<ul class="team-grid">
+  {%- for member in site.data.team -%}
+  <li class="team-member">
+    <img
+      class="team-member__photo"
+      src="{{ member.photo | prepend: '/assets/images/' | relative_url }}"
+      alt="Portrait of {{ member.name }}"
+      width="720"
+      height="600"
+      loading="lazy"
+    />
+    <div class="team-member__body">
+      <h3 class="team-member__name">{{ member.name }}</h3>
+      <p class="team-member__role">{{ member.role }}</p>
+      {%- if member.linkedin -%}
+      <a
+        class="arrow-link team-member__link"
+        href="{{ member.linkedin }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn <span aria-hidden="true">↗</span>
+      </a>
+      {%- endif -%}
+    </div>
+  </li>
+  {%- endfor -%}
+</ul>

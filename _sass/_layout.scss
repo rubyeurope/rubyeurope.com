@@ -150,11 +150,21 @@
   color: var(--color-text-link);
 }
 
+// Full-bleed section band. The content is centred and constrained to
+// --max-width-wide by the inline padding, so background surfaces bleed edge
+// to edge and adjacent sections can alternate white/paper for visual rhythm.
 .section {
-  inline-size: min(100%, var(--max-width-wide));
-  margin-inline: auto;
-  padding-block: var(--gap-section);
-  padding-inline: var(--gutter-page);
+  inline-size: 100%;
+  padding-block: var(--section-space);
+  padding-inline: max(
+    var(--gutter-page),
+    calc((100% - var(--max-width-wide)) / 2)
+  );
+}
+
+.section--organizers,
+.section--communities {
+  background: var(--color-bg-secondary);
 }
 
 .section > :where(h2, .lead, p) {
@@ -223,7 +233,6 @@
   margin-block-start: var(--space-6);
 }
 
-.pillars,
 .value-grid,
 .team-grid {
   display: grid;
@@ -232,9 +241,7 @@
   list-style: none;
 }
 
-.meetup-list,
-.partner-wall,
-.site-footer__links {
+.meetup-list {
   padding: 0;
   list-style: none;
 }
@@ -256,19 +263,6 @@
   color: var(--color-text-secondary);
 }
 
-.partner-wall {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr));
-  align-items: center;
-  gap: var(--space-6);
-}
-
-.partner img {
-  display: block;
-  max-block-size: 3rem;
-  margin-inline: auto;
-}
-
 .team-member__photo {
   border-radius: var(--card-radius);
 }
@@ -277,25 +271,6 @@
   padding-block: var(--space-8);
   padding-inline: var(--gutter-page);
   text-align: center;
-}
-
-.site-footer__brand {
-  margin: 0;
-  color: var(--color-text-brand);
-  font-family: var(--font-family-display);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-normal);
-}
-
-.site-footer__links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-5);
-}
-
-.site-footer__links a {
-  min-inline-size: var(--control-min-size);
 }
 
 @media (min-width: tokens.$breakpoint-md) {
@@ -319,7 +294,7 @@
     grid-column: 2;
     display: flex;
     justify-content: flex-end;
-    gap: var(--space-6);
+    gap: clamp(var(--space-3), 2vw, var(--space-6));
     margin: 0;
     padding: 0;
     border: 0;
@@ -329,7 +304,6 @@
     border: 0;
   }
 
-  .pillars,
   .value-grid,
   .team-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
