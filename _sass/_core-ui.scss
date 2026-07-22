@@ -11,7 +11,7 @@
 
 // Large thesis treatment reserved for the final CTA.
 .section-heading--manifesto h2 {
-  max-inline-size: none;
+  max-inline-size: 22ch;
   color: var(--color-text-secondary);
   font-size: clamp(2.5rem, 4.5vw, 4.5rem);
   font-weight: var(--font-weight-light);
@@ -28,76 +28,30 @@
   font-size: var(--font-size-lg);
 }
 
-// Who we are: a full-width thesis followed by supporting copy and community cloud.
-.who-layout {
-  display: grid;
-  gap: var(--space-6);
-  align-items: center;
-  margin-block-start: var(--space-7);
+// Who we are: a full-width manifesto statement followed by supporting copy.
+// Single column by design -- it breaks the rhythm between the full-bleed hero
+// and the multi-column grid sections that follow.
+.section--who .who-statement {
+  max-inline-size: 20ch;
+  color: var(--color-text-secondary);
+  font-size: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+  font-weight: var(--font-weight-light);
+  line-height: 1.04;
+  letter-spacing: var(--letter-spacing-tight);
+  text-wrap: balance;
 }
 
-.who-body {
+.section--who .who-statement span {
+  color: var(--color-text-primary);
+}
+
+.section--who .who-body {
   display: grid;
   gap: var(--space-5);
-  max-inline-size: 52ch;
+  max-inline-size: 58ch;
+  margin-block-start: var(--space-6);
   color: var(--color-text-secondary);
   font-size: var(--font-size-md);
-}
-
-// Community constellation: the Ruby Europe mark ringed by scattered
-// community logos. mix-blend-mode drops the logos' white backgrounds.
-.cloud {
-  position: relative;
-  inline-size: 100%;
-  max-inline-size: 30rem;
-  margin-inline: auto;
-  aspect-ratio: 1;
-}
-
-.cloud__mark {
-  position: absolute;
-  inset-block-start: 50%;
-  inset-inline-start: 50%;
-  translate: -50% -50%;
-  z-index: 2;
-}
-
-.cloud__mark img {
-  display: block;
-  inline-size: 7.5rem;
-  block-size: auto;
-}
-
-.cloud__mark::before {
-  content: "";
-  position: absolute;
-  inset: -3rem;
-  z-index: -1;
-  background: radial-gradient(
-    closest-side,
-    var(--color-bg-primary) 60%,
-    transparent
-  );
-}
-
-.cloud__icon {
-  position: absolute;
-  translate: -50% -50%;
-  inline-size: 2.6rem;
-  block-size: 2.6rem;
-  object-fit: contain;
-  opacity: 0.9;
-  mix-blend-mode: multiply;
-}
-
-.cloud__icon--sm {
-  inline-size: 2.1rem;
-  block-size: 2.1rem;
-}
-
-.cloud__icon--lg {
-  inline-size: 3.1rem;
-  block-size: 3.1rem;
 }
 
 // Editorial feature spreads: full visual fields alternate with tightly set
@@ -268,7 +222,7 @@
   flex-wrap: wrap;
   margin-block-start: var(--space-3);
   padding: 0;
-  color: var(--color-text-tertiary);
+  color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
@@ -418,10 +372,9 @@
 .site-footer__inner {
   display: grid;
   gap: var(--space-7);
-  inline-size: min(100%, var(--max-width-page));
-  margin-inline: auto;
+  inline-size: 100%;
   padding-block: var(--space-8);
-  padding-inline: var(--gutter-page);
+  padding-inline: var(--gutter-rail);
 }
 
 .site-footer__logo {
@@ -480,27 +433,6 @@
 }
 
 @media (min-width: tokens.$breakpoint-md) {
-  .section-heading--split {
-    display: grid;
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-    gap: var(--gap-grid);
-  }
-
-  .section-heading--split .lead {
-    align-self: end;
-    margin-block-start: 0;
-  }
-
-  .who-layout {
-    grid-template-columns: minmax(0, 7fr) minmax(18rem, 5fr);
-    gap: var(--gap-grid);
-    margin-block-start: var(--space-8);
-  }
-
-  .cloud {
-    max-inline-size: 24rem;
-  }
-
   .spread {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;

@@ -40,10 +40,9 @@
   display: grid;
   align-items: center;
   gap: var(--space-7);
-  inline-size: min(100%, var(--max-width-page));
-  margin-inline: auto;
+  inline-size: 100%;
   padding-block: var(--space-8);
-  padding-inline: var(--gutter-page);
+  padding-inline: var(--gutter-rail);
 }
 
 .hero__content {

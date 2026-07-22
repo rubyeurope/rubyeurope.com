@@ -10,7 +10,7 @@
   gap: var(--space-3) var(--space-4);
   min-block-size: var(--header-height);
   padding-block: var(--space-3);
-  padding-inline: var(--gutter-page);
+  padding-inline: var(--gutter-rail);
   background: var(--color-bg-secondary);
   border-block-end: var(--border-width-thin) solid var(--color-border-secondary);
 }
@@ -112,16 +112,19 @@
   }
 }
 
+// Mobile: full-width dropdown positioned below the sticky header. Kept out of
+// the header's flow so opening it never resizes the bar or shifts the logo.
 .site-nav {
-  grid-column: 1 / -1;
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline: 0;
+  z-index: 10;
   display: grid;
-  margin-block-end: calc(-1 * var(--space-3));
-  margin-inline: calc(-1 * var(--gutter-page));
   padding-block: var(--space-2) var(--space-3);
-  padding-inline: var(--gutter-page);
+  padding-inline: var(--gutter-rail);
   background: var(--color-bg-secondary);
-  border-block-start: var(--border-width-thin) solid
-    var(--color-border-secondary);
+  border-block: var(--border-width-thin) solid var(--color-border-secondary);
+  box-shadow: var(--shadow-md);
 }
 
 .site-nav[hidden] {
@@ -156,12 +159,10 @@
 .section {
   inline-size: 100%;
   padding-block: var(--section-space);
-  padding-inline: max(
-    var(--gutter-page),
-    calc((100% - var(--max-width-wide)) / 2)
-  );
+  padding-inline: var(--gutter-rail);
 }
 
+.section--who,
 .section--organizers,
 .section--communities {
   background: var(--color-bg-secondary);
@@ -290,6 +291,7 @@
 
   .site-nav,
   .site-nav[hidden] {
+    position: static;
     grid-row: 1;
     grid-column: 2;
     display: flex;
@@ -298,6 +300,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    box-shadow: none;
   }
 
   .site-nav a {

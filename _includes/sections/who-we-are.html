@@ -3,51 +3,21 @@
   id="who-we-are"
   aria-labelledby="who-we-are-title"
 >
-  <div class="section-heading">
-    <p class="eyebrow">A network of peers</p>
-    <h2 id="who-we-are-title">Who we are</h2>
-    <p class="lead">
-      Ruby Europe is a non-profit initiative connecting the people who sustain
-      Ruby communities across Europe.
+  <p class="eyebrow">Who we are</p>
+  <h2 class="who-statement" id="who-we-are-title">
+    A non-profit network for the people who
+    <span>keep Ruby thriving across Europe.</span>
+  </h2>
+
+  <div class="who-body">
+    <p>
+      We connect the organizers, speakers, and developers behind Europe's local
+      Ruby communities — helping talks, calls for papers, and introductions
+      travel between them.
     </p>
-  </div>
-
-  <div class="who-layout">
-    <div class="who-body">
-      <p>
-        We bring meetup organizers, speakers, and developers into a practical
-        peer network where experience, introductions, and ideas can move between
-        local groups.
-      </p>
-      <p>
-        We help when support is useful and stay out of the way when it is not.
-        Every community keeps its own identity, priorities, and pace.
-      </p>
-    </div>
-
-    {%- comment -%} Decorative constellation of European Ruby communities
-    orbiting the Ruby Europe mark. Positions are hand-tuned "top|left"
-    percentages; the aside is hidden from assistive tech because it is a
-    decorative expression of the network described in the page copy. {%-
-    endcomment -%} {%- assign cloud =
-    "polishrubyusergroup.webp|47|72.6|sm,valencia-rb.webp|67.1|61.7|,ruby-frankfurt.webp|71.3|40.7|,krug.webp|52|26.7|,ruby-banitsa.svg|29.5|42|sm,vienna-rb.webp|31.5|61.8|,amsterdam-rb.webp|63.6|81|,ruby-romania.webp|80.8|63.7|sm,euruko.webp|82.1|37.7|,wroclove-rb.webp|64|22.2|,barcelona-rb.webp|39.4|20.3|,paris-rb.webp|17.8|40.8|,dresden-rb.webp|17.5|63.9|,nantes-rb.webp|33.9|78.3|,minhorb.webp|79.5|81.3|,rubybelgium.svg|93|40.7|,friendly-rb.webp|72.5|10.3|,latvian-ruby-community.webp|31.9|6.2|,geneva-rb.webp|7|37.9|,madrid-rb.webp|11.5|75.5|,lyon-rb.webp|49.8|94|"
-    | split: "," -%}
-    <div class="cloud" aria-hidden="true">
-      <span class="cloud__mark">
-        <img
-          src="{{ '/assets/images/ruby-europe-icon.svg' | relative_url }}"
-          alt=""
-        />
-      </span>
-      {%- for item in cloud -%} {%- assign p = item | split: "|" -%}
-      <img
-        class="cloud__icon{% if p[3] != '' %} cloud__icon--{{ p[3] }}{% endif %}"
-        style="inset-block-start: {{ p[1] }}%; inset-inline-start: {{ p[2] }}%"
-        src="{{ '/assets/images/communities/' | append: p[0] | relative_url }}"
-        alt=""
-        loading="lazy"
-      />
-      {%- endfor -%}
-    </div>
+    <p>
+      Every group keeps its own identity, priorities, and pace. We help when
+      it's useful and stay out of the way when it's not.
+    </p>
   </div>
 </section>

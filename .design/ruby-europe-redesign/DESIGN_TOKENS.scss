@@ -131,18 +131,8 @@ $breakpoint-2xl: 96rem; // 1536px
   --max-width-wide: 72rem;
   --max-width-page: 90rem;
   --gutter-page: clamp(var(--space-4), 4vw, var(--space-8));
-  // Shared left/right rail. Full-bleed bands (header, hero, sections, footer)
-  // all consume this so their content aligns to one vertical grid edge.
-  --gutter-rail: max(
-    var(--gutter-page),
-    calc((100% - var(--max-width-wide)) / 2)
-  );
   --gap-grid: clamp(var(--space-5), 3vw, var(--space-7));
   --gap-section: clamp(var(--space-8), 9vw, var(--space-11));
-  // Vertical padding for each full-bleed section band. Separation between
-  // sections now comes from alternating surfaces, so this is deliberately
-  // smaller than the legacy --gap-section to avoid stacked dead space.
-  --section-space: clamp(var(--space-7), 6vw, var(--space-9));
 
   --border-width-thin: 1px;
   --border-width-strong: 2px;
