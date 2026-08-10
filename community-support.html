@@ -1,0 +1,419 @@
+---
+layout: default
+title: Ruby Europe Community Support
+description: Get the support you need to make your meetup happen.
+permalink: /community-support/
+grant_page: true
+---
+
+<section class="grant-hero" aria-labelledby="grant-title">
+  <img
+    class="grant-hero__field"
+    src="{{ '/assets/images/hero-europe-1500w.webp' | relative_url }}"
+    srcset="
+      {{ '/assets/images/hero-europe-770w.webp' | relative_url }} 768w,
+      {{ '/assets/images/hero-europe-1500w.webp' | relative_url }} 1500w,
+      {{ '/assets/images/hero-europe.webp' | relative_url }} 3843w
+    "
+    sizes="100vw"
+    width="3843"
+    height="1665"
+    alt=""
+    aria-hidden="true"
+    fetchpriority="high"
+    decoding="async"
+  />
+  <div class="grant-hero__shape" aria-hidden="true"></div>
+  <div class="grant-hero__inner">
+    <h1 id="grant-title">Every community starts with someone who cares.</h1>
+    <p>Get the support you need to make your meetup happen.</p>
+    <a class="btn btn--primary" href="#apply">Apply now</a>
+  </div>
+</section>
+
+<section class="section grant-story" aria-labelledby="grant-story-title">
+  <p class="eyebrow">Our approach</p>
+  <h2 class="grant-story__statement" id="grant-story-title">
+    Great meetups don't happen by accident.
+    <span
+      >Ruby Europe believes the strongest communities are built locally.</span
+    >
+  </h2>
+
+  <div class="grant-story__body">
+    <p>
+      Every meetup creates opportunities for developers to learn, exchange
+      ideas, make new connections, and inspire others to start something
+      themselves.
+    </p>
+    <p>
+      That's why we're here to support the people who make those meetups happen!
+    </p>
+    <p>
+      Whether you need help getting started, finding a venue, connecting with
+      speakers, promoting your event, or covering some of the costs - we're here
+      to help.
+    </p>
+  </div>
+</section>
+
+<section class="section grant-support" aria-labelledby="support-title">
+  <div class="grant-support__intro">
+    <p class="eyebrow">The program</p>
+    <h2 id="support-title">What support can you get?</h2>
+    <p class="grant-support__description">
+      The Ruby Europe Community Support is a lightweight program created for
+      Ruby meetup organizers across Europe.
+    </p>
+    <p class="grant-support__prompt">
+      Depending on your needs, we can help with:
+    </p>
+  </div>
+
+  <ul class="support-list">
+    <li>Up to €300 in funding</li>
+    <li>Promotional support</li>
+    <li>Organizational support with planning, venues, and speakers</li>
+    <li>Guidance from experienced community organizers</li>
+  </ul>
+</section>
+
+<section
+  class="section grant-application"
+  id="apply"
+  aria-labelledby="application-title"
+>
+  <div class="grant-application__heading">
+    <p class="eyebrow">Eligibility</p>
+    <h2 id="application-title">Apply for the Ruby Europe Grant!</h2>
+    <div class="grant-application__intro">
+      <p>
+        If you're organizing a Ruby meetup anywhere in Europe, we'd love to hear
+        from you.
+      </p>
+      <p>
+        Whether your meetup is just getting started or has been running for
+        years - if you want to bring Ruby developers together, this grant is for
+        you.
+      </p>
+    </div>
+  </div>
+
+  <div class="application-panel">
+    <form
+      class="grant-form"
+      method="post"
+      action="{{ site.grant_form_endpoint }}"
+      data-grant-form
+      data-endpoint="{{ site.grant_form_endpoint }}"
+      novalidate
+    >
+      <input
+        type="hidden"
+        name="source"
+        value="rubyeurope.com/community-support"
+      />
+
+      <div class="form-trap" hidden>
+        <label for="website">Website</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabindex="-1"
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="name">Your name <span aria-hidden="true">*</span></label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          maxlength="100"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="email"
+          >Email address <span aria-hidden="true">*</span></label
+        >
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          maxlength="200"
+          required
+        />
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="location"
+            >City &amp; country <span aria-hidden="true">*</span></label
+          >
+          <input
+            id="location"
+            name="location"
+            type="text"
+            autocomplete="address-level2"
+            maxlength="160"
+            placeholder="Ex: Berlin, Germany"
+            required
+          />
+          <p class="form-hint">(planned meetup location)</p>
+        </div>
+
+        <div class="form-field">
+          <label for="community-name">Meetup / community name</label>
+          <input
+            id="community-name"
+            name="community_name"
+            type="text"
+            maxlength="160"
+          />
+          <p class="form-hint">
+            If you already have a name for your meetup or community, tell us
+            about it.
+          </p>
+        </div>
+      </div>
+
+      <fieldset class="form-field">
+        <legend>
+          What stage is your meetup at? <span aria-hidden="true">*</span>
+        </legend>
+        <div class="choice-list">
+          <label
+            ><input
+              type="radio"
+              name="stage"
+              value="New meetup - starting from scratch"
+              required
+            />
+            <span>New meetup - starting from scratch</span></label
+          >
+          <label
+            ><input
+              type="radio"
+              name="stage"
+              value="Existing meetup - already running"
+            />
+            <span>Existing meetup - already running</span></label
+          >
+          <label
+            ><input
+              type="radio"
+              name="stage"
+              value="Restarting a meetup - bringing it back"
+            />
+            <span>Restarting a meetup - bringing it back</span></label
+          >
+        </div>
+      </fieldset>
+
+      <fieldset
+        class="form-field"
+        data-support-group
+        aria-describedby="support-hint support-error"
+      >
+        <legend>
+          What kind of support do you need? <span aria-hidden="true">*</span>
+        </legend>
+        <p class="form-hint" id="support-hint">Select all that apply.</p>
+        <div class="choice-grid">
+          <label
+            ><input
+              type="checkbox"
+              name="support"
+              value="Finding a venue or host"
+            />
+            <span>Finding a venue or host</span></label
+          >
+          <label
+            ><input type="checkbox" name="support" value="Finding a speaker" />
+            <span>Finding a speaker</span></label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="support"
+              value="Funding"
+              data-funding-choice
+            />
+            <span>Funding</span></label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="support"
+              value="Getting a group started / Promotion"
+            />
+            <span>Getting a group started / Promotion</span></label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="support"
+              value="Something else (describe)"
+              data-other-choice
+            />
+            <span>Something else (describe)</span></label
+          >
+        </div>
+        <p class="form-error" id="support-error" data-support-error hidden>
+          Please select at least one kind of support.
+        </p>
+      </fieldset>
+
+      <div class="form-field" data-other-field hidden>
+        <label for="other-support">Something else (describe)</label>
+        <input
+          id="other-support"
+          name="other_support"
+          type="text"
+          maxlength="300"
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="meetup-idea"
+          >Tell us more about your meetup idea
+          <span aria-hidden="true">*</span></label
+        >
+        <textarea
+          id="meetup-idea"
+          name="meetup_idea"
+          rows="7"
+          maxlength="3000"
+          required
+        ></textarea>
+        <p class="form-hint">
+          What would you like to organize? Who is it for? What impact do you
+          want to create?
+        </p>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field" data-funding-field hidden>
+          <label for="funding-amount">How much funding do you need?</label>
+          <input
+            id="funding-amount"
+            name="funding_amount"
+            type="number"
+            inputmode="numeric"
+            min="1"
+            max="300"
+            step="1"
+          />
+          <p class="form-hint">Only if you are requesting financial support.</p>
+        </div>
+
+        <div class="form-field">
+          <label for="planned-date"
+            >When are you planning to organize it?</label
+          >
+          <input id="planned-date" name="planned_date" type="month" />
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="meetup-url">Meetup page or social links</label>
+        <input
+          id="meetup-url"
+          name="meetup_url"
+          type="url"
+          inputmode="url"
+          autocomplete="url"
+          maxlength="500"
+        />
+      </div>
+
+      {%- if site.turnstile_site_key -%}
+      <div
+        class="cf-turnstile"
+        data-sitekey="{{ site.turnstile_site_key }}"
+        data-action="grant-application"
+      ></div>
+      {%- endif -%}
+
+      <div class="form-status" data-form-status aria-live="polite"></div>
+      <button class="btn btn--primary" type="submit" data-submit-button>
+        Submit application
+      </button>
+    </form>
+
+    <div class="application-success" data-form-success hidden tabindex="-1">
+      <div class="application-success__message">
+        <p class="eyebrow">Application received</p>
+        <h3>Your idea is now with us.</h3>
+        <p class="application-success__lead">
+          Thanks for taking the first step toward bringing your meetup to life.
+        </p>
+        <p>We’ll review your application and get back to you within 7 days.</p>
+        <p class="application-success__contact">
+          Have a question in the meantime?<br />
+          Email us at
+          <a href="mailto:contact@rubyeurope.com">contact@rubyeurope.com</a>.
+        </p>
+      </div>
+
+      <a
+        class="application-success__community"
+        href="https://discord.com/invite/VQpDWPpBZe"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="application-success__community-copy">
+          <span class="application-success__kicker">While you wait</span>
+          <strong>Join Ruby Europe on Discord</strong>
+          <span>Meet organizers and Rubyists from across Europe.</span>
+        </span>
+        <img
+          src="{{ '/assets/images/discord-qr.png' | relative_url }}"
+          alt=""
+          width="512"
+          height="512"
+        />
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section grant-partner" aria-labelledby="partner-title">
+  <div class="grant-partner__copy">
+    <p class="eyebrow">Community partners</p>
+    <h2 id="partner-title">Backed by Visuality</h2>
+    <div class="grant-partner__body">
+      <p>
+        This initiative is made possible thanks to the success of Ruby Community
+        Conference and the support of Visuality.
+      </p>
+      <p>
+        After each edition of the conference, the remaining surplus is entrusted
+        to Ruby Europe and reinvested into local Ruby meetups across Europe.
+      </p>
+      <p>Today, it's Visuality. Tomorrow, it might be your company too.</p>
+    </div>
+    <a
+      class="btn btn--ghost"
+      href="mailto:contact@rubyeurope.com?subject=Ruby%20Europe%20Community%20Partner"
+      >Become a Community Partner</a
+    >
+  </div>
+
+  <div class="partner-grid" aria-label="Community partners">
+    <div class="partner-grid__visuality">
+      <img
+        src="{{ '/assets/images/visuality-logo.svg' | relative_url }}"
+        alt="Visuality"
+        width="106"
+        height="28"
+      />
+    </div>
+  </div>
+</section>

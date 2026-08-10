@@ -11,6 +11,11 @@ author:
 github_repo: "rubyeurope/rubyeurope.com"
 github_branch: "main"
 
+# Public form configuration. Production values are added after staging sign-off.
+# See docs/grant-form-setup.md.
+grant_form_endpoint:
+turnstile_site_key:
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -58,11 +63,16 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - AGENTS.md
   - package.json
   - pnpm-lock.yaml
+  - pnpm-workspace.yaml
   - node_modules
   - .prettierrc
   - .playwright-mcp
   - docs
   - mise.toml
   - LICENSE
+  - worker
+  - wrangler.jsonc
+  - _config.staging.yml

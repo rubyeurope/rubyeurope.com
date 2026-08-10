@@ -35,8 +35,8 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
 
-      - name: Build with Jekyll
-        run: bundle exec jekyll build
+      - name: Build staging site with Jekyll
+        run: bundle exec jekyll build --config _config.yml,_config.staging.yml
         env:
           JEKYLL_ENV: production
 

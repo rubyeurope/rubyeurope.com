@@ -1,0 +1,4 @@
+url: "https://www.hansschnedlitz.com"
+baseurl: "/rubyeurope.com"
+grant_form_endpoint: "/rubyeurope.com/api/grant-applications"
+turnstile_site_key: "0x4AAAAAAEKfRXvCqzTAI9L2"

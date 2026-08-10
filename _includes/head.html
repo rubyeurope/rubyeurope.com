@@ -7,5 +7,16 @@
     src="{{ '/assets/js/navigation.js' | relative_url }}"
     type="module"
   ></script>
-  {% seo %}
+  {%- if page.grant_page -%}
+  <script
+    src="{{ '/assets/js/grant-form.js' | relative_url }}"
+    type="module"
+  ></script>
+  {%- if site.turnstile_site_key -%}
+  <script
+    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+    async
+    defer
+  ></script>
+  {%- endif -%} {%- endif -%} {% seo %}
 </head>

@@ -28,10 +28,10 @@
   font-size: var(--font-size-lg);
 }
 
-// Who we are: a full-width manifesto statement followed by supporting copy.
-// Single column by design -- it breaks the rhythm between the full-bleed hero
-// and the multi-column grid sections that follow.
-.section--who .who-statement {
+// Full-width manifesto statements followed by supporting copy. Single column
+// by design -- they break the rhythm between denser multi-column sections.
+.section--who .who-statement,
+.grant-story .grant-story__statement {
   max-inline-size: 20ch;
   color: var(--color-text-secondary);
   font-size: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
@@ -41,11 +41,13 @@
   text-wrap: balance;
 }
 
-.section--who .who-statement span {
+.section--who .who-statement span,
+.grant-story .grant-story__statement span {
   color: var(--color-text-primary);
 }
 
-.section--who .who-body {
+.section--who .who-body,
+.grant-story .grant-story__body {
   display: grid;
   gap: var(--space-5);
   max-inline-size: 58ch;
