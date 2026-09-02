@@ -55,6 +55,15 @@ locations = {
       img: 'https://www.rug-b.de/assets/labels/berlin-7e15291064be58fb05a3fa205fde8becf8d53d179a14c6b447c23ce9e61ccc49.png'
     },
     {
+      slug: 'berlin-rb',
+      name: 'Berlin.rb',
+      description: 'Berlin.rb is a monthly meetup for Berlin\'s Ruby community. We meet on the second Tuesday of every month for talks, project show-and-tells, and time with other people who write Ruby. It is free and open to everyone, whether you have been writing Ruby for 15 years or you are just curious about the language.',
+      latitude: 52.52,
+      longitude: 13.405,
+      link: 'https://berlinrb.org/',
+      img: '/logos/berlin-rb.svg'
+    },
+    {
       slug: 'barcelona-rb',
       name: 'Barcelona.rb',
       description: 'The Barcelona.rb is a diverse fun group of software engineers, developers, hackers, SaaS builders, and other techie folks to share your stories about the tech and coding world and listen to others\' successes, coding experiments, and in-production fuck-ups 😅',
