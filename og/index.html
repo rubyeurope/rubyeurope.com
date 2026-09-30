@@ -2,202 +2,22 @@
 permalink: /og/
 sitemap: false
 ---
-
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="robots" content="noindex" />
-    <title>Ruby Europe OG image preview</title>
-    <style>
-      /* Social card for rubyeurope.com — rendered at 1200x630.
-         Edit this file, preview it at /og/, then run `bin/og-image` to export
-         assets/images/og.png. */
-      @font-face {
-        font-family: "Kanit";
-        font-style: normal;
-        font-weight: 300;
-        src: url("{{ '/assets/fonts/Kanit-Light.ttf' | relative_url }}")
-          format("truetype");
-      }
-
-      @font-face {
-        font-family: "Kanit";
-        font-style: normal;
-        font-weight: 400;
-        src: url("{{ '/assets/fonts/Kanit-Regular.ttf' | relative_url }}")
-          format("truetype");
-      }
-
-      @font-face {
-        font-family: "Kanit";
-        font-style: normal;
-        font-weight: 600;
-        src: url("{{ '/assets/fonts/Kanit-SemiBold.ttf' | relative_url }}")
-          format("truetype");
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      html,
-      body {
-        width: 1200px;
-        height: 630px;
-      }
-
-      body {
-        position: relative;
-        display: grid;
-        grid-template-columns: 7fr 5fr;
-        overflow: hidden;
-        color: #2c2b39;
-        font-family: "Kanit", sans-serif;
-        background: #fff;
-      }
-
-      .content {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        padding: 64px 0 54px 72px;
-      }
-
-      .wordmark {
-        width: 520px;
-        height: auto;
-      }
-
-      .message {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 660px;
-      }
-
-      .eyebrow {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        color: #b12626;
-        font-size: 20px;
-        font-weight: 600;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-
-      .eyebrow::before {
-        width: 42px;
-        height: 3px;
-        background: currentcolor;
-        content: "";
-      }
-
-      h1 {
-        max-width: 640px;
-        margin-top: 28px;
-        font-size: 66px;
-        font-weight: 400;
-        letter-spacing: -0.025em;
-        line-height: 1.05;
-      }
-
-      .url {
-        padding-top: 24px;
-        font-size: 23px;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        border-top: 2px solid #2c2b39;
-      }
-
-      .art {
-        position: relative;
-        display: grid;
-        place-items: center;
-        background: #fbf7f4;
-      }
-
-      .art::before {
-        position: absolute;
-        inset: 0;
-        background: #b12626;
-        clip-path: polygon(68% 0, 100% 0, 100% 100%, 15% 100%);
-        content: "";
-      }
-
-      .ruby {
-        position: relative;
-        width: 470px;
-        color: #b12626;
-        transform: translate(-18px, 7px);
-      }
-
-      .ruby__outline,
-      .ruby__rule {
-        fill: none;
-        stroke: currentcolor;
-        stroke-linejoin: bevel;
-      }
-
-      .ruby__outline {
-        stroke-width: 10;
-      }
-
-      .ruby__rule {
-        stroke-width: 6;
-      }
-
-      .ruby__solid {
-        fill: currentcolor;
-      }
-
-      .ruby__paper {
-        fill: #fbf7f4;
-      }
-
-      .ruby__white {
-        fill: #fff;
-      }
-    </style>
-  </head>
-  <body>
-    <main class="content">
-      <img
-        class="wordmark"
-        src="{{ '/assets/images/ruby-europe-logo.svg' | relative_url }}"
-        alt="Ruby Europe"
-        width="829"
-        height="172"
-      />
-      <div class="message">
-        <p class="eyebrow">Local roots. European reach.</p>
-        <h1>A shared home for the Ruby community in Europe.</h1>
-      </div>
-      <p class="url">rubyeurope.com</p>
-    </main>
-
-    <div class="art" aria-hidden="true">
-      <svg class="ruby" viewBox="0 0 640 640">
-        <polygon
-          class="ruby__outline"
-          points="320,34 574,202 506,438 320,606 134,438 66,202"
-        />
-        <polygon class="ruby__solid" points="320,34 574,202 420,202" />
-        <polygon class="ruby__paper" points="320,34 420,202 220,202" />
-        <polygon class="ruby__solid" points="320,34 220,202 66,202" />
-        <polygon class="ruby__white" points="66,202 220,202 320,606 134,438" />
-        <polygon class="ruby__solid" points="220,202 420,202 320,606" />
-        <polygon class="ruby__paper" points="420,202 574,202 506,438 320,606" />
-        <path
-          class="ruby__rule"
-          d="M66 202h508M220 202 320 34l100 168M66 202l254 404 254-404"
-        />
-      </svg>
-    </div>
-  </body>
+<html lang="en" data-theme="light">
+<head>
+  <title>Ruby Europe social card</title>
+  {% include og-head.html %}
+</head>
+<body>
+{% include logo-sprite.svg %}
+<div class="card card--home">
+  <svg class="logo" viewBox="0 0 829 172" aria-label="Ruby Europe"><use href="#re-logo"/></svg>
+  <div class="text">
+    <h1>Ruby is<br>built locally.</h1>
+    <p class="sub">A non-profit network of local Ruby communities across Europe.</p>
+  </div>
+  <p class="url">rubyeurope.com</p>
+  {% include map.html %}
+</div>
+</body>
 </html>
