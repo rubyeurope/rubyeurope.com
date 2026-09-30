@@ -1,0 +1,14 @@
+# Map frame: Mercator projection, longitude -11..33, latitude 35.5..61.5.
+# Land geometry: Natural Earth 110m admin-0 countries (public domain),
+# clipped and simplified, in _includes/map/land-path.txt.
+width: 1000
+height: 921
+
+# The dashed "your city?" marker. It links to the support page.
+# On a mouse it follows the pointer; this is where it rests.
+open_seat:
+  x: 40.45
+  y: 47.63
+  label: w
+  # Dashed lines from the open seat into the ring (city names from communities.yml).
+  links: [Paris, Berlin]

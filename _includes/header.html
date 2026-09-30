@@ -1,39 +1,13 @@
-<header class="site-header" data-site-header>
-  <a
-    class="site-header__logo"
-    href="{{ '/#top' | relative_url }}"
-    aria-label="Ruby Europe home"
-  >
-    <img
-      src="{{ '/assets/images/ruby-europe-logo.svg' | relative_url }}"
-      alt="Ruby Europe"
-      width="829"
-      height="172"
-    />
-  </a>
-
-  <button
-    class="site-nav__toggle"
-    type="button"
-    aria-expanded="false"
-    aria-controls="primary-navigation"
-    data-nav-toggle
-  >
-    <span class="site-nav__menu-label">Menu</span>
-    <span class="site-nav__close-label">Close</span>
-    <span class="site-nav__icon" aria-hidden="true"><span></span></span>
-  </button>
-
-  <nav
-    class="site-nav"
-    id="primary-navigation"
-    aria-label="Primary"
-    data-site-nav
-  >
-    <a href="{{ '/#who-we-are' | relative_url }}">Who we are</a>
-    <a href="{{ '/#highlights' | relative_url }}">Highlights</a>
-    <a href="{{ '/#for-organizers' | relative_url }}">For organizers</a>
-    <a href="{{ '/#team' | relative_url }}">Team</a>
-    <a href="{{ '/#join' | relative_url }}">Join</a>
-  </nav>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Ruby Europe, home"><svg class="logo" viewBox="0 0 829 172" aria-hidden="true" focusable="false"><use href="#re-logo"/></svg></a>
+    <nav class="nav" aria-label="Site">
+      <a class="nav__hide-sm" href="{{ '/#communities' | relative_url }}">Communities</a>
+      <a href="{{ '/support/' | relative_url }}"{% if page.nav == 'support' %} aria-current="page"{% endif %}>Support</a>
+      <a href="{{ site.discord_url }}">Discord ↗</a>
+      {%- if page.nav == 'support' %}
+      <a class="btn btn--ghost btn--sm" href="#request">Tell us what you need</a>
+      {%- endif %}
+    </nav>
+  </div>
 </header>

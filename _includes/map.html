@@ -1,0 +1,31 @@
+{%- comment -%}
+  Map of the communities. Data: _data/communities.yml and _data/map.yml.
+  Land, ring and dashed links are SVG and scale with the map. City markers are
+  HTML positioned by --x/--y percentages, so labels keep a fixed CSS size
+  (13px on a 340px map, 15px on a 700px one) instead of shrinking with it.
+  Solid marker = a community that meets. Dashed marker = an open seat.
+{%- endcomment -%}
+{%- assign map = site.data.map -%}
+{%- assign kx = map.width | divided_by: 100.0 -%}
+{%- assign ky = map.height | divided_by: 100.0 -%}
+{%- capture mark %}<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1 13 7 7 13 1 7Z"/></svg>{% endcapture -%}
+<figure class="map" data-map>
+  <div class="map__stage">
+    <svg class="map__svg" viewBox="0 0 {{ map.width }} {{ map.height }}" aria-hidden="true">
+      <path class="map__land" d="{% include map/land-path.txt %}"/>
+      {%- capture ring %}{% for c in site.data.communities %}{{ c.x | times: kx | round: 1 }},{{ c.y | times: ky | round: 1 | append: " " }}{% endfor %}{% endcapture %}
+      <polygon class="map__ring" points="{{ ring | strip }}"/>
+      {%- for name in map.open_seat.links %}
+      {%- assign c = site.data.communities | where: "city", name | first %}
+      <line class="map__link" x1="{{ map.open_seat.x | times: kx | round: 1 }}" y1="{{ map.open_seat.y | times: ky | round: 1 }}" x2="{{ c.x | times: kx | round: 1 }}" y2="{{ c.y | times: ky | round: 1 }}"/>
+      {%- endfor %}
+    </svg>
+    {%- for c in site.data.communities %}
+    <a class="city city--{{ c.label }}" href="{{ c.url }}" style="--x:{{ c.x }};--y:{{ c.y }}"><span class="city__mark">{{ mark }}</span><span class="city__name">{{ c.city }}</span></a>
+    {%- endfor %}
+    <a class="city city--ghost city--{{ map.open_seat.label }}" href="{{ '/support/' | relative_url }}" style="--x:{{ map.open_seat.x }};--y:{{ map.open_seat.y }}" aria-label="Your city? Get support for your meetup"><span class="city__mark">{{ mark }}</span><span class="city__name" aria-hidden="true">your city?</span></a>
+  </div>
+  {%- if include.note %}
+  <figcaption class="map__note"><span class="map__note-key" aria-hidden="true"></span><span class="map__note-label">your city?</span> {{ include.note }}</figcaption>
+  {%- endif %}
+</figure>

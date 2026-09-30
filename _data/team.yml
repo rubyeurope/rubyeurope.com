@@ -1,29 +1,23 @@
-# Team members shown in the "Team" section.
-# TODO: replace stub headshots (cropped from the value-pack PDF) with high-res PNGs.
+# People in the "People behind Ruby Europe" section.
+# Photos live in assets/images/team/ as 400x400 squares. They are shown in
+# grayscale on the --photo-bg colour, so cut-outs with a transparent background
+# and photos on the original red background read as one set.
 - name: Mariusz Kozieł
-  role: >-
-    Founder of Ruby Europe and the driving force behind the vision of a strong
-    European Ruby ecosystem.
+  role: Founder. Started Ruby Europe and Ruby Community Conference; CEO of Visuality.
   photo: team/mariusz-koziel.png
   linkedin: https://www.linkedin.com/in/koziel-mariusz
 
 - name: Paweł Strzałkowski
-  role: >-
-    Founding Supporter helping turn the vision into practical structure and
-    long-term momentum.
+  role: Founding supporter. CTO at Visuality; gave the first Ruby + AI talk in Warsaw.
   photo: team/pawel-strzalkowski.png
   linkedin: https://www.linkedin.com/in/pawel-strzalkowski
 
 - name: Hans Schnedlitz
-  role: >-
-    Community builder expanding the network by connecting local groups and
-    engaging organizers.
+  role: Community builder, Vienna. Connects local groups and their organisers.
   photo: team/hans-schnedlitz.png
   linkedin: https://www.linkedin.com/in/hschne
 
 - name: Dawid Cekiera
-  role: >-
-    Growth Lead helping the community grow through content, storytelling, and
-    outreach.
-  photo: team/dawid-cekiera.png
-  linkedin: https://www.linkedin.com/in/dawid-cekiera
+  role: Growth lead. Content, storytelling and outreach.
+  photo: team/dawid-cekiera.jpg
+  linkedin: https://www.linkedin.com/in/dawidcekiera/
