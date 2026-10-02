@@ -1,0 +1,70 @@
+# The communities on the map and in the "Five cities" list, in ring order.
+#
+# The ring on the map joins the cities in the order below and closes back to
+# the first one, so keep geographic neighbours next to each other.
+#
+# x / y: marker position in percent of the map. Compute them with
+#   bin/map-position LAT LON
+# label: which side of the marker the city name sits on (e, w, n or s).
+#   Pick the side that does not collide with a neighbour at 340px map width.
+# lat / lon are quoted so the list keeps three decimals.
+
+- city: Paris
+  country: France
+  group: Paris.rb
+  note: first Tuesday of the month
+  url: https://paris-rb.org
+  link_text: paris-rb.org
+  lat: "48.853"
+  lon: "2.349"
+  x: 30.34
+  y: 55.25
+  label: e
+
+- city: Berlin
+  country: Germany
+  group: Berlin.rb
+  note: second Tuesday of the month
+  url: https://berlinrb.org
+  link_text: berlinrb.org
+  lat: "52.520"
+  lon: "13.405"
+  x: 55.47
+  y: 40.95
+  label: n
+
+- city: Warsaw
+  country: Poland
+  group: PLRUG
+  note: Polish Ruby User Group
+  url: https://www.meetup.com/polishrubyusergroup
+  link_text: meetup.com/polishrubyusergroup
+  lat: "52.200"
+  lon: "21.013"
+  x: 72.76
+  y: 42.25
+  label: e
+
+- city: Kraków
+  country: Poland
+  group: KRUG
+  note: Kraków Ruby Users Group
+  url: https://www.meetup.com/krakow-ruby-users-group
+  link_text: meetup.com/krakow-ruby-users-group
+  lat: "50.067"
+  lon: "19.958"
+  x: 70.36
+  y: 50.64
+  label: e
+
+- city: Vienna
+  country: Austria
+  group: Vienna.rb
+  note: quarterly
+  url: https://www.meetup.com/vienna-rb
+  link_text: meetup.com/vienna-rb
+  lat: "48.208"
+  lon: "16.370"
+  x: 62.20
+  y: 57.66
+  label: s

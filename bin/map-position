@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Prints the map position of a city for _data/communities.yml.
+#
+#   bin/map-position 50.087 14.421   # Prague
+#   x: 57.78
+#   y: 50.56
+#
+# The map is a Mercator projection cropped to longitude -11..33 and latitude
+# 35.5..61.5 (see _data/map.yml). x and y are percentages of the map.
+
+LON0 = -11.0
+LON1 = 33.0
+LAT0 = 35.5
+LAT1 = 61.5
+
+def mercator(lat) = Math.log(Math.tan((Math::PI / 4) + (lat * Math::PI / 360))) * 180 / Math::PI
+
+abort "Usage: #{File.basename($PROGRAM_NAME)} LAT LON" unless ARGV.size == 2
+
+lat, lon = ARGV.map { Float(it) }
+abort "That point is outside the map." unless lat.between?(LAT0, LAT1) && lon.between?(LON0, LON1)
+
+x = (lon - LON0) / (LON1 - LON0) * 100
+y = (mercator(LAT1) - mercator(lat)) / (mercator(LAT1) - mercator(LAT0)) * 100
+puts "x: #{x.round(2)}", "y: #{y.round(2)}"

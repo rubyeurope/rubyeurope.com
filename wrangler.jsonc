@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ruby-europe-grant",
+  "main": "worker/grant-form.js",
+  "compatibility_date": "2026-08-08",
+  "workers_dev": false,
+  "observability": {
+    "enabled": true,
+  },
+  "env": {
+    "staging": {
+      "name": "ruby-europe-grant-staging",
+      "routes": [
+        {
+          "pattern": "www.hansschnedlitz.com/rubyeurope.com/api/grant-applications",
+          "zone_id": "367679962b107cd3d248df5bbc93252a",
+        },
+      ],
+      "vars": {
+        "ALLOWED_ORIGIN": "https://www.hansschnedlitz.com",
+        "BASE_PATH": "/rubyeurope.com",
+        "EXPECTED_HOSTNAME": "www.hansschnedlitz.com",
+        "SHEET_NAME": "Applications - Staging",
+        "SPREADSHEET_ID": "1ouUP5menQZMQbMB1wyIaTwvYwn9wR86cRis8u9OzcaM",
+      },
+    },
+    "production": {
+      "name": "ruby-europe-grant-production",
+      "vars": {
+        "ALLOWED_ORIGIN": "https://rubyeurope.com",
+        "BASE_PATH": "",
+        "EXPECTED_HOSTNAME": "rubyeurope.com",
+        "SHEET_NAME": "Applications",
+        "SPREADSHEET_ID": "1ouUP5menQZMQbMB1wyIaTwvYwn9wR86cRis8u9OzcaM",
+      },
+    },
+  },
+}

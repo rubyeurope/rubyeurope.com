@@ -1,0 +1,35 @@
+---
+layout: default
+title: Page not found
+description: This page is not on rubyeurope.com any more.
+permalink: /404.html
+sitemap: false
+---
+<script>
+  // The old Rails site had more pages. Send links from old posts to where the content lives now.
+  (function () {
+    var path = location.pathname.replace(/\/+$/, '') || '/';
+    var moved = {
+      '/contact': '/support/',
+      '/meetup_registration_requests/new': '/support/',
+      '/community-support': '/support/',
+      '/about': '/#people',
+      '/conferences': '/',
+      '/meetups': '/#communities',
+      '/news': '/#tours'
+    };
+    var to = moved[path] || (path.indexOf('/news/') === 0 ? '/#tours' : null);
+    if (to) location.replace('{{ site.baseurl }}' + to);
+  })();
+</script>
+<section class="hero error-page">
+  <div class="wrap">
+    <p class="eyebrow">Error 404</p>
+    <h1>This page isn't here any more.</h1>
+    <p class="lead">We've simplified rubyeurope.com to two pages: the communities, and community support for meetups. What you were looking for is probably on one of them.</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="{{ '/' | relative_url }}">Go to the homepage</a>
+      <a class="btn btn--ghost" href="{{ '/support/' | relative_url }}">Get support for your meetup</a>
+    </div>
+  </div>
+</section>

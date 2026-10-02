@@ -1,0 +1,27 @@
+---
+permalink: /og/support/
+sitemap: false
+---
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <title>Ruby Europe community support social card</title>
+  {% include og-head.html %}
+</head>
+<body>
+{% include logo-sprite.svg %}
+<div class="card card--support">
+  <svg class="logo" viewBox="0 0 829 172" aria-label="Ruby Europe"><use href="#re-logo"/></svg>
+  <div>
+    <p class="eyebrow">Community support</p>
+    <h1>Every community starts with someone who cares.</h1>
+  </div>
+  <div class="figures">
+    <div><b>{{ site.support.pool }}</b><span>available across Europe</span></div>
+    <div><b>{{ site.support.max_per_meetup }}</b><span>roughly the most per meetup</span></div>
+    <div><b>~7 days</b><span>until a real person replies</span></div>
+  </div>
+  <p class="url">rubyeurope.com/support</p>
+</div>
+</body>
+</html>

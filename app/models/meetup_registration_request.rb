@@ -1,2 +1,0 @@
-class MeetupRegistrationRequest < ApplicationRecord
-end

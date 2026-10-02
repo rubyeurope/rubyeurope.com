@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+  <link rel="preload" href="{{ '/assets/fonts/bricolage-grotesque-400-800-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  {%- for script in page.scripts %}
+  <script src="{{ '/assets/js/' | append: script | append: '.js' | relative_url }}" defer></script>
+  {%- endfor %}
+  {%- if page.turnstile and site.turnstile_site_key %}
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  {%- endif %}
+  {% seo %}
+</head>
+<body>
+{% include logo-sprite.svg %}
+<a class="skip" href="#main">Skip to content</a>
+{% include header.html %}
+<main id="main">
+{{ content }}
+</main>
+{% include footer.html %}
+</body>
+</html>

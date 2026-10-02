@@ -1,0 +1,200 @@
+---
+layout: default
+title: Community support
+description: A room, a speaker, sometimes a bit of money. Tell Ruby Europe what your meetup is missing — a real person replies within about 7 days.
+permalink: /support/
+nav: support
+scripts: [support-form]
+turnstile: true
+image:
+  path: /assets/images/og-support.png
+  width: 1200
+  height: 630
+  alt: "Ruby Europe community support — every community starts with someone who cares."
+---
+{%- capture node %}<span class="chain__node"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.2 14.8 8 8 14.8 1.2 8Z"/></svg></span>{% endcapture -%}
+<section class="hero hero--support">
+  <div class="wrap">
+    <p class="eyebrow">Community support</p>
+    <h1>Every community starts with someone who cares.</h1>
+    <p class="lead">A room, a speaker, sometimes a bit of money. Tell us what your meetup is missing — helping local communities happen is what Ruby Europe is here for.</p>
+    <div class="actions"><a class="btn btn--primary" href="#request">Tell us what you need</a></div>
+  </div>
+</section>
+
+<div class="wrap">
+  <ul class="facts" aria-label="The numbers">
+    <li><b>{{ site.support.pool }}</b><span>available right now, across Europe</span></li>
+    <li><b>{{ site.support.max_per_meetup }}</b><span>is roughly the most one meetup gets</span></li>
+    <li><b>~7 days</b><span>and a real person replies to you</span></li>
+  </ul>
+</div>
+
+<section class="section section--no-rule">
+  <div class="wrap grid">
+    <div class="head"><h2>It doesn't have to be about money</h2></div>
+    <div>
+      <p class="prose">Ruby Europe exists to support the European Ruby community. When a local meetup thrives — people meet, learn and build together — the whole ecosystem grows with it. So we help on whatever front you're short on. Sometimes that's a company willing to lend a room. Sometimes it's finding someone to give a talk. Sometimes it's covering the real costs. Often it's a mix.</p>
+      <p class="pull">If what you're missing is a venue or a speaker and we can help you find one, that might be all you need. That's a good outcome, not a smaller one.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid">
+    <div class="head"><h2>What we can help with</h2></div>
+    <div>
+      <ul class="helps">
+        <li><h3>A venue or host</h3><p>We'll put you in touch with a company or space willing to host your meetup.</p></li>
+        <li><h3>A speaker</h3><p>Someone gave a talk in another city this month. We can ask them to give it in yours, or pass your call for papers along the network.</p></li>
+        <li><h3>Funding</h3><p>When money is the blocker: the room, the food, a speaker's travel, equipment, promotion.</p></li>
+        <li><h3>Getting started</h3><p>Running a first meetup, or waking up a group that went quiet. We've done both.</p></li>
+      </ul>
+      <p class="note">Something else? Say so in the form — it has a box for exactly that.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid">
+    <div class="head"><h2>A conference that didn't keep its profit</h2></div>
+    <div>
+      <ol class="chain" aria-label="Where the money comes from">
+        <li>{{ node }}<b><a href="{{ site.conference_url }}">Ruby Community Conference</a></b><small>one day, once a year</small></li>
+        <li>{{ node }}<b><span class="mono">{{ site.support.pool }}</span> left after costs</b><small>created by attendees, speakers and sponsors</small></li>
+        <li class="chain__to-open">{{ node }}<b>Handed to Ruby Europe</b><small>no strings attached</small></li>
+        <li class="chain__open">{{ node }}<b>Your meetup</b><small>up to {{ site.support.max_per_meetup }}</small></li>
+      </ol>
+      <p class="prose"><a href="{{ site.conference_url }}">Ruby Community Conference</a> is organised by Visuality and has never been run for profit. Once the last edition covered its costs, {{ site.support.pool }} was left over — money that attendees, speakers and sponsors created together. It's now going back out to local meetups.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid">
+    <div class="head"><h2>No scoring, no paperwork maze</h2></div>
+    <div>
+      <ol class="steps">
+        <li><h3>Tell us what you need</h3><p>The form below takes a few minutes. Funding, a venue, a speaker, or "I'm not sure yet" — all fine.</p></li>
+        <li><h3>We reply within about 7 days</h3><p>A real person reads every request and works out how we can help. If we need more, we'll just ask.</p></li>
+        <li><h3>We make it happen</h3><p>An introduction, a speaker, money towards the costs — whatever fits. Often more than one.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+{%- comment -%}
+  The form. Field names and values follow the contract of worker/grant-form.js,
+  so the endpoint can be either the Google Apps Script in apps-script/ (current:
+  Google Sheet + Notion + email to the team) or the Cloudflare Worker.
+  Configure the endpoint in _config.yml (support_form_endpoint).
+{%- endcomment %}
+<section class="section form-section" id="request">
+  <div class="wrap">
+    <div class="head">
+      <h2>Tell us what you need</h2>
+      <p>It takes a few minutes. No login.</p>
+    </div>
+    <div class="box">
+      <form id="support-form" class="form-grid" action="{{ site.support_form_endpoint }}" method="post" data-endpoint="{{ site.support_form_endpoint }}">
+        <input type="hidden" name="source" value="rubyeurope.com/support">
+        <div class="sr-only" aria-hidden="true"><label for="f-website">Leave this empty</label><input type="text" name="website" id="f-website" tabindex="-1" autocomplete="off"></div>
+        <div class="field">
+          <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" id="f-name" name="name" type="text" required maxlength="100" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" id="f-email" name="email" type="email" required maxlength="200" autocomplete="email" aria-describedby="f-email-hint">
+          <p class="hint" id="f-email-hint">Only used to reply to your request.</p>
+        </div>
+        <div class="field">
+          <label for="f-city">City &amp; country <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" id="f-city" name="location" type="text" required maxlength="160" placeholder="e.g. Kraków, Poland" autocomplete="address-level2">
+        </div>
+        <div class="field">
+          <label for="f-group">Meetup or group name</label>
+          <input class="input" id="f-group" name="community_name" type="text" maxlength="160" aria-describedby="f-group-hint">
+          <p class="hint" id="f-group-hint">Leave blank if it doesn't exist yet.</p>
+        </div>
+        <fieldset>
+          <legend>What stage is it at? <span class="req" aria-hidden="true">*</span></legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="stage" value="New meetup - starting from scratch" id="f-stage-new" required>New</label>
+            <label class="chip"><input type="radio" name="stage" value="Existing meetup - already running" id="f-stage-existing">Existing</label>
+            <label class="chip"><input type="radio" name="stage" value="Restarting a meetup - bringing it back" id="f-stage-restarting">Restarting one that went quiet</label>
+          </div>
+        </fieldset>
+        <fieldset aria-describedby="help-error">
+          <legend>How can we help? <span class="req" aria-hidden="true">*</span></legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="support" value="Finding a venue or host" id="f-help-venue">A venue or host</label>
+            <label class="chip"><input type="checkbox" name="support" value="Finding a speaker" id="f-help-speaker">A speaker</label>
+            <label class="chip"><input type="checkbox" name="support" value="Funding" id="f-help-funding">Funding</label>
+            <label class="chip"><input type="checkbox" name="support" value="Getting a group started / Promotion" id="f-help-starting">Getting started</label>
+            <label class="chip"><input type="checkbox" name="support" value="Something else (describe)" id="f-help-other">Something else</label>
+          </div>
+          <p class="error" id="help-error" role="alert" hidden>Pick at least one — "Something else" is fine.</p>
+        </fieldset>
+        <div class="field span">
+          <label for="f-more">Tell us more <span class="req" aria-hidden="true">*</span></label>
+          <p class="hint" id="f-more-hint">What are you planning, and what would help most? A few sentences is plenty.</p>
+          <textarea class="input" id="f-more" name="meetup_idea" rows="5" required maxlength="3000" aria-describedby="f-more-hint"></textarea>
+        </div>
+        <div class="field">
+          <label for="f-amount">If you need funding, roughly how much? <span class="muted">(EUR, max 300)</span></label>
+          <input class="input" id="f-amount" name="funding_amount" type="number" min="1" max="300" step="1" inputmode="numeric" placeholder="e.g. 250">
+        </div>
+        <div class="field">
+          <label for="f-url">Meetup page or socials</label>
+          <input class="input" id="f-url" name="meetup_url" type="url" maxlength="500" placeholder="https://" autocomplete="url">
+        </div>
+        {%- if site.turnstile_site_key %}
+        <div class="cf-turnstile" data-sitekey="{{ site.turnstile_site_key }}" data-action="{{ site.turnstile_action | default: 'support-request' }}"></div>
+        {%- endif %}
+        <p class="form-status" id="form-status" role="alert" hidden></p>
+        <div class="span form-foot">
+          <button class="btn btn--primary" type="submit">Send it over</button>
+          <span class="small">A real person replies within about 7 days.</span>
+          <p class="privacy">Your answers go to the Ruby Europe team through Google Sheets and Notion and are only used to reply to your request. To have them deleted, email <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.</p>
+        </div>
+      </form>
+      <div class="done" id="support-done" hidden>
+        <h3 tabindex="-1">Your idea is now with us.</h3>
+        <p>Thanks for taking the first step towards bringing your meetup to life. A real person from Ruby Europe will read this and get back to you within about 7 days.</p>
+        <p>While you wait, come and say hello on the Ruby Europe Discord — that's where the organisers hang out.</p>
+        <div class="actions"><a class="btn btn--ghost" href="{{ site.discord_url }}">Join the Discord <span class="arr" aria-hidden="true">↗</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid">
+    <div class="head"><h2>Common questions</h2></div>
+    <dl class="faq">
+      <div><dt>Do I need a registered organisation?</dt><dd>No. Individuals and informal groups are welcome. Invoicing is only sorted out after we've agreed to support you.</dd></div>
+      <div><dt>What if I only need a venue or a speaker?</dt><dd>Perfect. Tell us what's missing and we'll try to connect you with it. If it turns out you don't need money at all, even better.</dd></div>
+      <div><dt>Does my event need to be big?</dt><dd>Not at all. A small local meetup is exactly the kind of thing we want to help happen.</dd></div>
+      <div><dt>Do I have to credit anyone?</dt><dd>No. If you'd like to share how it went afterwards we'd love to hear it, but it's entirely up to you.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section" id="partners">
+  <div class="wrap grid">
+    <div class="head">
+      <h2>Who makes this possible</h2>
+    </div>
+    <div>
+      <p class="prose">The money behind this round came from one company's conference. There's room for more — if you'd like your company to put something into European Ruby communities, we'll tell you exactly where it goes.</p>
+      <ul class="partners" aria-label="Community partners">
+        <li class="is-real"><a href="https://visuality.pl">{% include visuality-logo.svg %}</a></li>
+        <li class="is-open"><a href="mailto:{{ site.author.email }}?subject=Community%20partner">your company?</a></li>
+        <li class="is-open" aria-hidden="true"></li>
+        <li class="is-open" aria-hidden="true"></li>
+      </ul>
+      <p><a class="textlink" href="mailto:{{ site.author.email }}?subject=Community%20partner">Become a community partner</a></p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+<style>
+  /* Social cards, rendered at 1200x630 by bin/og-image. Always the light theme. */
+  html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+  body { background: var(--bg); }
+  .card { position: relative; width: 1200px; height: 630px; padding: 64px 72px; display: grid; align-content: space-between; }
+  .card .logo { height: 44px; width: calc(44px * 829 / 172); }
+  .card h1 { font-weight: 700; letter-spacing: -.035em; line-height: .98; margin: 0; }
+  .card .sub { font-size: 30px; line-height: 1.3; color: var(--ink-2); margin-top: 22px; max-width: 24ch; }
+  .card .url { font-family: var(--font-mono); font-size: 22px; letter-spacing: .02em; color: var(--ink); }
+  .card .eyebrow { font-size: 20px; }
+  .card--home h1 { font-size: 96px; }
+  .card--home .map { position: absolute; right: 28px; top: 70px; width: 540px; }
+  .card--home .text { max-width: 580px; }
+  .card--home .sub { max-width: 21ch; }
+  .card--support h1 { font-size: 66px; max-width: 17ch; margin-top: 16px; }
+  .card--support .figures { display: flex; gap: 56px; }
+  .card--support .figures b { display: block; font-size: 54px; font-weight: 700; letter-spacing: -.035em; line-height: 1; }
+  .card--support .figures span { display: block; margin-top: 8px; font-size: 22px; color: var(--ink-2); }
+  .card .city__name { font-size: 20px; }
+  .card .city__mark { width: 20px; height: 20px; left: -10px; top: -10px; }
+  .card .city--ghost .city__name { font-size: 18px; }
+</style>

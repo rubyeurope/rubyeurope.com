@@ -1,0 +1,13 @@
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Ruby Europe, home"><svg class="logo" viewBox="0 0 829 172" aria-hidden="true" focusable="false"><use href="#re-logo"/></svg></a>
+    <nav class="nav" aria-label="Site">
+      <a class="nav__hide-sm" href="{{ '/#communities' | relative_url }}">Communities</a>
+      <a href="{{ '/support/' | relative_url }}"{% if page.nav == 'support' %} aria-current="page"{% endif %}>Support</a>
+      <a href="{{ site.discord_url }}">Discord ↗</a>
+      {%- if page.nav == 'support' %}
+      <a class="btn btn--ghost btn--sm" href="#request">Tell us what you need</a>
+      {%- endif %}
+    </nav>
+  </div>
+</header>

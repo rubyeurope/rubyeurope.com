@@ -1,0 +1,8 @@
+[tools]
+# Picked up from .ruby-version and .node-version
+
+[settings]
+experimental = true
+
+[hooks]
+postinstall = "npx corepack enable"

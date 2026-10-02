@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+function main() {
+  if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
+    usage
+    exit 0
+  fi
+
+  [[ $# -eq 0 ]] || die "Unknown argument: $1"
+
+  local chrome
+  local port=4999
+  local server
+
+  chrome="$(command -v chromium || command -v chromium-browser || command -v google-chrome || command -v google-chrome-stable || true)"
+  [[ -n "$chrome" ]] || die "Chromium or Chrome is required"
+  command -v identify >/dev/null 2>&1 || die "ImageMagick identify is required"
+
+  cd "$(dirname "$0")/.."
+
+  echo "Building site..."
+  bundle exec jekyll build >/dev/null
+
+  echo "Serving _site on :$port..."
+  ruby -run -e httpd _site -p "$port" >/dev/null 2>&1 &
+  server=$!
+  trap "kill $server 2>/dev/null || true" EXIT
+  sleep 2
+
+  capture "$chrome" "http://localhost:$port/og/" "assets/images/og.png"
+  capture "$chrome" "http://localhost:$port/og/support/" "assets/images/og-support.png"
+}
+
+capture() {
+  local chrome="$1" url="$2" output="$3"
+
+  echo "Capturing $output..."
+  "$chrome" \
+    --headless \
+    --disable-gpu \
+    --hide-scrollbars \
+    --no-sandbox \
+    --force-device-scale-factor=1 \
+    --window-size=1200,630 \
+    --virtual-time-budget=4000 \
+    --screenshot="$output" \
+    "$url" >/dev/null 2>&1
+
+  local dimensions
+  dimensions="$(identify -format "%wx%h" "$output")"
+  [[ "$dimensions" == "1200x630" ]] || die "Expected 1200x630 output, got $dimensions"
+
+  echo "Wrote $output ($dimensions)"
+}
+
+usage() {
+  cat <<EOF
+Usage: $(basename "$0")
+
+Build the site and capture the social cards:
+  /og/          -> assets/images/og.png
+  /og/support/  -> assets/images/og-support.png
+EOF
+}
+
+die() {
+  echo "Error: $1" >&2
+  exit "${2:-1}"
+}
+
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+  main "$@"
+fi

@@ -1,65 +1,79 @@
 # Ruby Europe
 
-Repository used for Ruby Europe site
+The Ruby Europe website: two pages, built with Jekyll and deployed to GitHub
+Pages.
 
-Production at: https://rubyeurope.com
+Production: https://rubyeurope.com
 
+- `/` — who we are, the communities on the map, what Ruby Europe does, the
+  people behind it, Discord and the newsletter.
+- `/support/` — community support for meetups, with the request form.
 
-## Contributing Changes
+Dynamic data (event listings, recordings, the full list of European Ruby
+communities) lives elsewhere: [rubyevents.org](https://www.rubyevents.org),
+[Luma](https://luma.com/rubyeurope) and [YouTube](https://youtube.com/@RubyEurope).
 
-As an open-source project hosted on GitHub at rubyeurope/rubyeurope.com, we welcome contributions, especially for updating information about local Ruby meetups and conferences. The `db/seeds.rb` file is used to populate the database with each deployment, so put new meetups and conferences there.
+## Development
 
-An example Pull Request: https://github.com/rubyeurope/rubyeurope.com/pull/1
+Requires Ruby and Node (managed via [mise](https://mise.jdx.dev)).
 
-Here's how to contribute:
+```sh
+mise install
+bundle install
+bundle exec jekyll serve
+```
 
-1. Fork the repository and create your feature branch:
-   ```
-   git checkout -b my-new-feature
-   ```
+The site serves at http://localhost:4000.
 
-2. For new meetups or conferences:
-   - Add the event logo to the `public/logos` folder. Name it consistently with existing logos.
-   - Update `db/seeds.rb` with the new event information.
+## Content
 
-3. Make your changes in the relevant files.
+Everything that changes lives in `_data/` and `_config.yml`:
 
-4. Commit your changes:
-   ```
-   git commit -am 'Add some content'
-   ```
+- `_data/communities.yml` — the cities on the map and in the list, in ring order.
+- `_data/map.yml` — the map frame and the dashed "your city?" marker.
+- `_data/team.yml` — the people section. Photos in `assets/images/team/`.
+- `_config.yml` — Discord and conference links, the support amounts
+  (`support.pool`, `support.max_per_meetup`), the form endpoint and the
+  Mailchimp list.
 
-5. Push to the branch:
-   ```
-   git push origin my-new-feature
-   ```
+Page copy is in `index.html` and `support.html`. Styles are plain CSS in
+`assets/css/site.css`; fonts (Bricolage Grotesque, DM Mono, SIL OFL) are
+self-hosted in `assets/fonts/`, so visitors' browsers never call Google.
 
-6. Create a new Pull Request.
+### Adding a city
 
-## Local Installation
+1. `bin/map-position LAT LON` prints its `x` and `y`.
+2. Add an entry to `_data/communities.yml` between its two nearest neighbours
+   in the current order, so the ring stays a simple loop. Pick the `label`
+   side that does not collide with a neighbour on a phone.
+3. If it lands where the open marker rests, move `open_seat` in
+   `_data/map.yml`, and update `links` if its nearest cities changed.
+4. Update the "Five cities" heading.
 
-Follow these steps to set up the project locally:
+## Forms
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/rubyeurope/ruby-europe.git
-   cd ruby-europe
-   ```
+- **Support requests** go to a Google Apps Script web app that writes to a
+  Google Sheet and Notion and emails the team. Setup: `docs/support-form.md`.
+  Until `support_form_endpoint` is set, the form asks people to email
+  contact@rubyeurope.com.
+- **Newsletter** sign-ups go straight to the existing Mailchimp list.
 
-2. Install Ruby dependencies:
-   ```
-   bundle install
-   ```
+## Social cards
 
-3. Set up the database:
-   - Create database, run migrations and seed data:
-     ```
-     rails db:setup
-     ```
+`og/` and `og/support/` are the 1200×630 cards for link previews.
+`bin/og-image` builds the site and exports them to `assets/images/og.png` and
+`assets/images/og-support.png`.
 
-4. Start the Rails server:
-   ```
-   bin/dev # use to enable tailwind and hot reload
-   ```
+## Deployment
 
-5. Visit `http://localhost:3000` or `http://0.0.0.0:3000` in your web browser to see the application running (Google maps won't work otherwise).
+Pushing to `main` builds and deploys to GitHub Pages
+(`.github/workflows/jekyll.yml`). One-time repository setup:
+
+1. **Settings → Pages → Source: GitHub Actions**.
+2. **Settings → Pages → Custom domain: rubyeurope.com**, then **Enforce HTTPS**
+   once the certificate is issued.
+3. DNS (Cloudflare): point `rubyeurope.com` and `www` at GitHub Pages
+   (`CNAME` to `rubyeurope.github.io`, DNS only until the certificate is issued).
+
+Old URLs from the Rails site (`/contact`, `/about`, `/news/…`, …) are sent to
+their new place by `404.html`.

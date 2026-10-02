@@ -1,0 +1,141 @@
+---
+layout: default
+scripts: [map, newsletter]
+---
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="eyebrow">European Ruby community</p>
+      <h1>Ruby is built locally.</h1>
+      <p class="lead">Ruby Europe is a non-profit network for the people who keep Ruby thriving across Europe. We connect the organisers, speakers and developers behind Europe's local Ruby communities — and we're looking for the next city.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="{{ '/support/' | relative_url }}">Get support for your meetup</a>
+        <a class="btn btn--ghost" href="{{ site.discord_url }}">Join the Discord <span class="arr" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    {% include map.html note="Every group keeps its own identity, priorities and pace. We help when it's useful and stay out of the way when it's not." %}
+  </div>
+</section>
+
+<section class="section" id="communities">
+  <div class="wrap grid">
+    <div class="head">
+      <h2>Five cities that meet, regularly</h2>
+      <p>Every one of them is run by people doing it after work, for free. Turn up at any of them and you'll be welcome.</p>
+    </div>
+    <ul class="roster">
+      {%- for c in site.data.communities %}
+      <li>
+        <div class="roster__city">{{ c.city }} <small>{{ c.country }}</small></div>
+        <div class="roster__group"><strong>{{ c.group }}</strong> <span>· {{ c.note }}</span> <a href="{{ c.url }}">{{ c.link_text }}</a></div>
+        <div class="roster__geo">{{ c.lat }} N · {{ c.lon }} E</div>
+      </li>
+      {%- endfor %}
+      <li class="roster__open">
+        <div class="roster__city">Your city?</div>
+        <div class="roster__group">The sixth community in the alliance — tell us what it's missing. <a href="{{ '/support/' | relative_url }}">Get support</a></div>
+        <div class="roster__geo">··.··· N · ··.··· E</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid">
+    <div class="head">
+      <h2>Three things, done properly</h2>
+    </div>
+    <ul class="rows">
+      <li>
+        <h3>We connect the people behind the groups</h3>
+        <p>We help talks, calls for papers and introductions travel between cities, so a talk given in Vienna can be given again in Kraków and nobody starts from nothing.</p>
+      </li>
+      <li>
+        <h3>We cover what a meetup is missing</h3>
+        <p>A room, pizza, a projector, a speaker's train ticket. Whatever is standing between an organiser and the next evening.</p>
+      </li>
+      <li id="tours">
+        <h3>We take Ruby on tour</h3>
+        <div class="tours">
+          <article class="tour">
+            <figure>
+              <img src="{{ '/assets/images/tours/spain-triangle.jpg' | relative_url }}" width="1000" height="750" loading="lazy" alt="Spain Triangle map: Barcelona.rb on 5 November, Valencia.rb on 6 November, Madrid.rb on 7 November">
+              <figcaption>Spain · November 2024</figcaption>
+            </figure>
+            <h4>Spain Triangle</h4>
+            <p>Bringing Ruby meetups in Spain back to life. Barcelona, Valencia and Madrid, linked by train, with speakers travelling from one to the next.</p>
+          </article>
+          <article class="tour tour--pair">
+            <div class="tour__pair">
+              <figure>
+                <img src="{{ '/assets/images/tours/ruby-ai-london.jpg' | relative_url }}" width="1000" height="750" loading="lazy" alt="Ruby + AI London meetup poster: 17 June 2025, Fresha office, talks by Paweł Strzałkowski and Yorick Jacquin">
+                <figcaption>London · 17 June 2025</figcaption>
+              </figure>
+              <figure>
+                <img src="{{ '/assets/images/tours/ruby-ai-berlin.jpg' | relative_url }}" width="1000" height="750" loading="lazy" alt="Ruby + AI Berlin meetup poster: 24 June 2025, Lufthansa Innovation Hub, talks by Paweł Strzałkowski and Chris Hasinski">
+                <figcaption>Berlin · 24 June 2025</figcaption>
+              </figure>
+            </div>
+            <h4>Ruby + AI</h4>
+            <p>Making the case for Ruby as a good language for building AI products. It started in Warsaw with PLRUG in October 2024, then went to London, Berlin and Paris.</p>
+          </article>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="people">
+  <div class="wrap grid">
+    <div class="head">
+      <h2>People behind Ruby Europe</h2>
+      <p>Founded in 2024 and run by these four.</p>
+    </div>
+    <ul class="people">
+      {%- for person in site.data.team %}
+      <li>
+        <img class="people__photo" src="{{ '/assets/images/' | append: person.photo | relative_url }}" width="400" height="400" loading="lazy" alt="{{ person.name }}">
+        <div class="people__name">{{ person.name }}</div>
+        <div class="people__role">{{ person.role }}</div>
+        <div class="people__link"><a href="{{ person.linkedin }}">LinkedIn ↗</a></div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap grid">
+    <p class="band__figure">{{ site.support.pool }}</p>
+    <div class="band__text">
+      <p>is going back into local Ruby meetups across Europe — the surplus from the last <a href="{{ site.conference_url }}">Ruby Community Conference</a>. Up to {{ site.support.max_per_meetup }} a meetup, no logos, no thank-yous required.</p>
+      <div class="band__actions"><a class="btn btn--primary" href="{{ '/support/' | relative_url }}">How to ask for support</a><a class="textlink" href="{{ '/support/#partners' | relative_url }}">For companies: become a community partner</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="stay">
+  <div class="wrap grid">
+    <div class="head"><h2>Where the community actually talks</h2></div>
+    <div class="stay">
+      <div class="stay__item">
+        <h3>Discord</h3>
+        <p>Organisers, speakers and anyone writing Ruby in Europe. Ask for a speaker, offer to give a talk, or find out what's on near you.</p>
+        <div class="actions"><a class="btn btn--ghost" href="{{ site.discord_url }}">Join the Discord <span class="arr" aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="stay__item">
+        <h3>Newsletter <span class="tag">occasional</span></h3>
+        <p>Upcoming meetups and conferences across Europe, and news when support goes out to a new city.</p>
+        <form class="inline-form" action="{{ site.newsletter.mailchimp_action }}" method="post" target="_blank" data-newsletter>
+          <div class="field">
+            <label for="nl-email">Your email</label>
+            <input class="input" id="nl-email" name="EMAIL" type="email" required autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="sr-only" aria-hidden="true"><input type="text" name="{{ site.newsletter.honeypot }}" id="nl-hp" tabindex="-1" value="" autocomplete="off"></div>
+          <button class="btn btn--ghost" type="submit">Subscribe</button>
+        </form>
+        <p class="ok" id="nl-status" role="status" hidden></p>
+      </div>
+    </div>
+  </div>
+</section>

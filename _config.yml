@@ -1,0 +1,98 @@
+url: "https://rubyeurope.com"
+baseurl: ""
+lang: en
+title: "Ruby Europe"
+tagline: "Ruby is built locally"
+description: "Ruby Europe is a non-profit network for the people who keep Ruby thriving across Europe. We connect the organisers, speakers and developers behind Europe's local Ruby communities."
+author:
+  name: Ruby Europe
+  email: contact@rubyeurope.com
+
+github_repo: "rubyeurope/rubyeurope.com"
+github_branch: "main"
+
+discord_url: "https://discord.gg/VQpDWPpBZe"
+conference_url: "https://rubycommunityconference.com"
+
+# Community support round. Shown on both pages; change them here only.
+support:
+  pool: "€3,000"
+  max_per_meetup: "€300"
+
+# Support form endpoint (public URL, no secrets). Currently the Google Apps
+# Script web app in apps-script/support-form.gs, which writes to Google Sheets
+# and Notion and emails the team. Setup: docs/support-form.md.
+# Leave empty and the form tells people to email contact@rubyeurope.com instead.
+support_form_endpoint:
+
+# Optional Cloudflare Turnstile. When a site key is set, the form shows the
+# widget and the endpoint should verify the token (both backends can).
+turnstile_site_key:
+turnstile_action: support-request
+
+# Newsletter: the existing Mailchimp list (same as the old Rails site).
+newsletter:
+  mailchimp_action: "https://rubyeurope.us8.list-manage.com/subscribe/post?u=b9681baf33b320b7189e9584b&id=903ced6444&f_id=001666e1f0"
+  honeypot: "b_b9681baf33b320b7189e9584b_903ced6444"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll_picture_tag
+
+# jekyll-seo-tag
+logo: /assets/images/ruby-europe-logo.svg
+image:
+  path: /assets/images/og.png
+  width: 1200
+  height: 630
+  alt: "Ruby Europe — Ruby is built locally"
+twitter:
+  username: RubyEurope
+  card: summary_large_image
+social:
+  name: Ruby Europe
+  links:
+    - "https://x.com/RubyEurope"
+    - "https://youtube.com/@RubyEurope"
+    - "https://linkedin.com/company/ruby-europe"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/images/og.png
+        width: 1200
+        height: 630
+        alt: "Ruby Europe — Ruby is built locally"
+
+
+# jekyll_picture_tag
+picture:
+  source: "assets/images/"
+  output: "assets/images/generated"
+
+exclude:
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - AGENTS.md
+  - package.json
+  - pnpm-lock.yaml
+  - pnpm-workspace.yaml
+  - node_modules
+  - .prettierrc
+  - .playwright-mcp
+  - docs
+  - mise.toml
+  - LICENSE
+  - worker
+  - wrangler.jsonc
+  - _config.staging.yml
+  - apps-script
+  - bin
+  - current-full.png
