@@ -441,7 +441,7 @@ textarea.input { min-height: 140px; resize: vertical; line-height: 1.5; }
 .form-grid { display: grid; gap: 22px 32px; }
 @media (min-width: 760px) { .form-grid { grid-template-columns: 1fr 1fr; } }
 .form-grid .span { grid-column: 1 / -1; }
-fieldset { border: 0; padding: 0; margin: 0; min-width: 0; display: grid; gap: 6px; }
+fieldset { border: 0; padding: 0; margin: 0; min-width: 0; display: grid; align-content: start; gap: 6px; }
 legend { font-weight: 600; font-size: .9375rem; padding: 0; margin-bottom: 4px; }
 .req { color: var(--red-ink); font-weight: 400; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }

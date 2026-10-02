@@ -96,6 +96,8 @@ image:
       <p>It takes a few minutes. No login.</p>
     </div>
     <div class="box">
+      {%- assign support_endpoint = site.support_form_endpoint | strip %}
+      {%- if support_endpoint != "" %}
       <form id="support-form" class="form-grid" action="{{ site.support_form_endpoint }}" method="post" data-endpoint="{{ site.support_form_endpoint }}">
         <input type="hidden" name="source" value="rubyeurope.com/support">
         <div class="sr-only" aria-hidden="true"><label for="f-website">Leave this empty</label><input type="text" name="website" id="f-website" tabindex="-1" autocomplete="off"></div>
@@ -165,6 +167,14 @@ image:
         <p>While you wait, come and say hello on the Ruby Europe Discord — that's where the organisers hang out.</p>
         <div class="actions"><a class="btn btn--ghost" href="{{ site.discord_url }}">Join the Discord <span class="arr" aria-hidden="true">↗</span></a></div>
       </div>
+      {%- else %}
+      <div class="done">
+        <h3>Email us your request</h3>
+        <p>Write to <a href="mailto:{{ site.author.email }}?subject=Community%20support%20request">{{ site.author.email }}</a> and tell us your name, your city, what stage your meetup is at and how we can help. If you need funding, say roughly how much (up to {{ site.support.max_per_meetup }}).</p>
+        <p>A real person from Ruby Europe will read it and get back to you within about 7 days.</p>
+        <div class="actions"><a class="btn btn--primary" href="mailto:{{ site.author.email }}?subject=Community%20support%20request">Email {{ site.author.email }}</a></div>
+      </div>
+      {%- endif %}
     </div>
   </div>
 </section>
