@@ -16,7 +16,7 @@ conference_url: "https://rubycommunityconference.com"
 
 # Community support round. Shown on both pages; change them here only.
 support:
-  pool: "€3,000"
+  pool: "€4,000"
   max_per_meetup: "€300"
 
 # Support form endpoint (public URL, no secrets). Currently the Google Apps
