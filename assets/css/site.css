@@ -282,7 +282,7 @@ h3 { font-size: 1.1875rem; line-height: 1.3; letter-spacing: -.012em; }
 .city:focus-visible { outline: none; }
 .city:focus-visible .city__mark { outline: 2px solid var(--red-ink); outline-offset: 3px; border-radius: 2px; }
 
-/* the sixth marker: dashed = open */
+/* the open-seat marker: dashed = open */
 .city--ghost { z-index: 2; }
 .city--ghost .city__mark { width: 18px; height: 18px; left: -9px; top: -9px; }
 .city--ghost .city__mark path { fill: var(--bg); stroke: var(--red-ink); stroke-width: 1.6; stroke-dasharray: 3.2 2.4; stroke-linejoin: round; }

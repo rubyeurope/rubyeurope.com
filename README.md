@@ -48,7 +48,9 @@ self-hosted in `assets/fonts/`, so visitors' browsers never call Google.
    side that does not collide with a neighbour on a phone.
 3. If it lands where the open marker rests, move `open_seat` in
    `_data/map.yml`, and update `links` if its nearest cities changed.
-4. Update the "Five cities" heading.
+4. Update the number of cities in `index.html`, both in the heading of the
+   communities list and in the "Your city?" row below it.
+5. Run `bin/og-image` so the social card shows the updated map.
 
 ## Forms
 

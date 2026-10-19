@@ -1,4 +1,4 @@
-# The communities on the map and in the "Five cities" list, in ring order.
+# The communities on the map and in the "Six cities" list, in ring order.
 #
 # The ring on the map joins the cities in the order below and closes back to
 # the first one, so keep geographic neighbours next to each other.
@@ -68,3 +68,15 @@
   x: 62.20
   y: 57.66
   label: s
+
+- city: Prague
+  country: Czechia
+  group: Prague.rb
+  note: first Wednesday of the month
+  url: https://www.meetup.com/praguerb
+  link_text: meetup.com/praguerb
+  lat: "50.100"
+  lon: "14.423"
+  x: 57.78
+  y: 50.51
+  label: n
